@@ -1,0 +1,425 @@
+{
+  "Q1": {
+    "query": "Why are new-age OEMs winning large Indian electric bus tenders and how are legacy OEMs positioned?",
+    "retrievals": [
+      {
+        "sim": 0.893,
+        "doc_id": "mkt_iea_india_fund",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.878,
+        "doc_id": "mkt_iea_india_stock",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.873,
+        "doc_id": "c_1ebf7a6e9af31a11c530",
+        "modality": "text"
+      },
+      {
+        "sim": 0.854,
+        "doc_id": "c_6baea38a95f738ddcb39",
+        "modality": "text"
+      },
+      {
+        "sim": 0.85,
+        "doc_id": "mkt_iea_india_salesshare",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.849,
+        "doc_id": "c_003ddf1e0e811564d8ba",
+        "modality": "text"
+      },
+      {
+        "sim": 0.681,
+        "doc_id": "1d4a1664-699d-4488-8634-f6bdd8553a08",
+        "modality": "image"
+      },
+      {
+        "sim": 0.676,
+        "doc_id": "chart_chart_india_ebus_stock_targets",
+        "modality": "chart"
+      },
+      {
+        "sim": 0.671,
+        "doc_id": "55cba8f5-ec0a-4822-8a64-7e1585d14eb9",
+        "modality": "image"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: New-age OEMs are winning large Indian electric bus tenders due to their competitive pricing and agility in the market, which has allowed them to outbid established players like Tata Motors and VECV. Legacy OEMs are struggling to adapt to the rapidly evolving EV landscape, resulting in a loss of market share.\n\n2. **Key evidence**:\n   - DOC_ID: mkt_iea_india_stock: \"India's electric bus stock grew from under 3,000 in 2020 to over 11,500 by end of 2024.\"\n   - DOC_ID: c_1ebf7a6e9af31a11c530: \"Switch Mobility to supply 5000 electric buses for Indian market. This is one of the largest orders.\"\n   - DOC_ID: 1d4a1664-699d-4488-8634-f6bdd8553a08: \"Tata Motors and VECV...were priced out of the mega electric bus tender.\"\n   - DOC_ID: c_6baea38a95f738ddcb39: \"PMI is now the second largest electric bus brand in India. They have 3,000+ buses on the road.\"\n   - DOC_ID: mkt_iea_india_fund: \"India aims to reach a stock of 50,000 electric buses by 2027, supported by a USD 390 million fund.\"\n\n3. **Interpretation**: The Trust-backed GCC strategy of legacy OEMs may be undermined by their inability to innovate and compete on price with newer entrants. This gap in responsiveness to market demands could jeopardize their long-term viability in the EV bus sector.\n\n4. **Recommended action**:\n   1. **Finding**: New-age OEMs are capturing significant market share.\n   2. **Metric**: Monitor the sales growth and tender wins of new-age OEMs like Switch Mobility and PMI.\n   3. **Interpretation**: Assess the competitive pricing strategies and technological advancements of these players.\n   4. **Implication**: Develop a strategic response to enhance competitiveness in pricing and innovation.\n   5. **Action**: Invest in R&D and explore partnerships or acquisitions to bolster EV capabilities.\n\n5. **Limitations**:\n   - Evidence on consumer sentiment and long-term operational performance of new-age OEMs is not available.\n   - The small sample size of image-derived claims limits the robustness of quantitative insights."
+  },
+  "Q2": {
+    "query": "How large is the India electric-bus market and what is its growth trajectory and government targets?",
+    "retrievals": [
+      {
+        "sim": 0.921,
+        "doc_id": "mkt_iea_india_stock",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.916,
+        "doc_id": "mkt_iea_india_fund",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.882,
+        "doc_id": "c_1ebf7a6e9af31a11c530",
+        "modality": "text"
+      },
+      {
+        "sim": 0.879,
+        "doc_id": "c_6baea38a95f738ddcb39",
+        "modality": "text"
+      },
+      {
+        "sim": 0.878,
+        "doc_id": "mkt_iea_india_salesshare",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.865,
+        "doc_id": "c_d32a9cc3b3ea1ead120d",
+        "modality": "text"
+      },
+      {
+        "sim": 0.723,
+        "doc_id": "chart_chart_india_ebus_stock_targets",
+        "modality": "chart"
+      },
+      {
+        "sim": 0.672,
+        "doc_id": "1d4a1664-699d-4488-8634-f6bdd8553a08",
+        "modality": "image"
+      },
+      {
+        "sim": 0.671,
+        "doc_id": "55cba8f5-ec0a-4822-8a64-7e1585d14eb9",
+        "modality": "image"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: The Indian electric bus market is projected to grow significantly, with the stock increasing from under 3,000 in 2020 to over 11,500 by the end of 2024. The government aims to achieve a stock of 50,000 electric buses by 2027, supported by substantial funding and initiatives.\n\n2. **Key evidence**:\n   - DOC_ID: mkt_iea_india_stock: \"India's electric bus stock grew from under 3,000 in 2020 to over 11,500 by end of 2024.\"\n   - DOC_ID: mkt_iea_india_fund: \"India aims to reach a stock of 50,000 electric buses by 2027, supported by a USD 390 million fund.\"\n   - DOC_ID: mkt_iea_india_salesshare: \"IEA projects India's electric bus sales share rises to about 35% in 2030 and 60% in 2035.\"\n   - DOC_ID: chart_chart_india_ebus_stock_targets: \"India electric bus stock and deployment targets: 3,000 in 2020 to 11,500 in 2024, 40,000 by 2027.\"\n   - DOC_ID: c_1ebf7a6e9af31a11c530: \"Switch Mobility to supply 5000 electric buses for Indian market.\"\n\n3. **Interpretation**: The rapid growth trajectory of the Indian electric bus market, alongside government backing, aligns with the legacy OEM's Trust-backed GCC strategy by emphasizing reliability and sustainability in transportation. This presents an opportunity for established players to leverage their trustworthiness in a burgeoning market.\n\n4. **Recommended action**:\n   1. **Finding**: Government targets for electric bus stock are ambitious.\n   2. **Metric**: Aim for a market share of 35% by 2030 as projected.\n   3. **Interpretation**: Position the OEM as a trusted partner in achieving these targets.\n   4. **Implication**: Invest in R&D and partnerships to enhance electric bus offerings.\n   5. **Action**: Develop a strategic plan to align with government initiatives and secure funding.\n\n5. **Limitations**:\n   - The retrieved corpus does not provide detailed insights into consumer sentiment or specific competitive dynamics.\n   - Quantitative claims from image-derived sources are exploratory and should be treated with caution."
+  },
+  "Q3": {
+    "query": "How does the Gross Cost Contract (GCC) model and government financing shape EV bus tender competition?",
+    "retrievals": [
+      {
+        "sim": 0.853,
+        "doc_id": "c_529bc0280cec5b65e64b",
+        "modality": "text"
+      },
+      {
+        "sim": 0.852,
+        "doc_id": "c_3bbbe2007cd7a0638673",
+        "modality": "text"
+      },
+      {
+        "sim": 0.841,
+        "doc_id": "c_1d1deaa46afad335ab86",
+        "modality": "text"
+      },
+      {
+        "sim": 0.836,
+        "doc_id": "c_f9f6547d4eb13e256195",
+        "modality": "text"
+      },
+      {
+        "sim": 0.832,
+        "doc_id": "c_6a9a7042354b204892d5",
+        "modality": "text"
+      },
+      {
+        "sim": 0.831,
+        "doc_id": "mkt_iea_global_ebus",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.664,
+        "doc_id": "6120605a-1c59-46b7-b81f-dfd785ea1e5c",
+        "modality": "image"
+      },
+      {
+        "sim": 0.646,
+        "doc_id": "EKA (4)",
+        "modality": "image"
+      },
+      {
+        "sim": 0.622,
+        "doc_id": "chart_chart_china_vs_india_stock",
+        "modality": "chart"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: The Gross Cost Contract (GCC) model, coupled with government financing, significantly influences EV bus tender competition by providing financial backing that encourages adoption and operational efficiency. This model is perceived as beneficial for transitioning from diesel to electric buses, supported by government initiatives that have accelerated EV adoption in the bus sector.\n\n2. **Key evidence**:\n   - DOC_ID: c_f9f6547d4eb13e256195: \"Buses have progressed the fastest in EV adoption mainly due to government funding from states and centre.\"\n   - DOC_ID: c_3bbbe2007cd7a0638673: \"Best is to use GCC model for Diesel buses.\"\n   - DOC_ID: mkt_iea_global_ebus: \"Global electric bus sales exceeded 70,000 units in 2024, up 30% year-over-year.\"\n   - DOC_ID: chart_chart_china_vs_india_stock: \"Electric-bus fleet scale gap: China 680,000 vs India 11,500 in 2024.\"\n\n3. **Interpretation**: The GCC model aligns with the legacy OEM's strategy of fostering trust through reliable government-backed financing, which can enhance competitive positioning in the EV bus market. By leveraging this model, the OEM can build credibility and attract partnerships that facilitate growth in a rapidly evolving sector.\n\n4. **Recommended action**:\n   1. **Finding**: Government funding is crucial for EV bus adoption.\n   2. **Metric**: Monitor the impact of GCC contracts on tender outcomes.\n   3. **Interpretation**: Increased reliance on GCC can enhance operational efficiency and market share.\n   4. **Implication**: Strengthening partnerships with government entities can secure more tenders.\n   5. **Action**: Develop a strategy to engage with government stakeholders to promote GCC contracts.\n\n5. **Limitations**:\n   - Evidence on the direct impact of GCC on tender competition is limited and primarily anecdotal.\n   - The small sample size of image-derived data may not accurately represent broader market trends."
+  },
+  "Q4": {
+    "query": "What are the battery supply-chain risks and how do falling battery prices and China dependence affect an Indian OEM?",
+    "retrievals": [
+      {
+        "sim": 0.876,
+        "doc_id": "mkt_supply_chain_risk",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.87,
+        "doc_id": "c_3ec647c0c96c88dbe985",
+        "modality": "text"
+      },
+      {
+        "sim": 0.868,
+        "doc_id": "c_8168e51104973da0d5d2",
+        "modality": "text"
+      },
+      {
+        "sim": 0.865,
+        "doc_id": "c_ca04dc6adc8cf8fce65e",
+        "modality": "text"
+      },
+      {
+        "sim": 0.856,
+        "doc_id": "c_087feedca339fe5aa7be",
+        "modality": "text"
+      },
+      {
+        "sim": 0.851,
+        "doc_id": "c_62f5af4a3b0926899117",
+        "modality": "text"
+      },
+      {
+        "sim": 0.68,
+        "doc_id": "chart_chart_battery_price_trend",
+        "modality": "chart"
+      },
+      {
+        "sim": 0.6,
+        "doc_id": "1c3f1cbe-665c-49c9-86db-ee0cb7cc5e2e",
+        "modality": "image"
+      },
+      {
+        "sim": 0.593,
+        "doc_id": "55cba8f5-ec0a-4822-8a64-7e1585d14eb9",
+        "modality": "image"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: The Indian OEM faces significant battery supply-chain risks due to heavy dependence on China for cell manufacturing and LFP cathode supply. While falling battery prices improve tender economics, they do not mitigate the risks associated with reliance on a single country for critical components.\n\n2. **Key evidence**:\n   - DOC_ID: mkt_supply_chain_risk - \"Battery supply chains remain concentrated: China dominates cell manufacturing and LFP cathode supply.\"\n   - DOC_ID: mkt_supply_chain_risk - \"Falling pack prices help tender economics but do not remove single-country component dependence risk for Indian OEMs.\"\n   - DOC_ID: c_3ec647c0c96c88dbe985 - \"India can't move beyond Aamron and Exide batteries.\"\n   - DOC_ID: c_62f5af4a3b0926899117 - \"I think sodium ion batteries can be a bit economical. No dependence on china also.\"\n   - DOC_ID: chart_chart_battery_price_trend - \"Lithium-ion battery pack price decline: $1183/kWh 2010 to $139 in 2023.\"\n\n3. **Interpretation**: The legacy OEM's strategy of Trust-backed GCC Growth must address the vulnerabilities in the battery supply chain, particularly the risks posed by reliance on Chinese suppliers. Strengthening local battery production capabilities could enhance resilience and foster trust among stakeholders.\n\n4. **Recommended action**:\n   1. Finding: High dependence on China for battery components.\n   2. Metric: \"China dominates cell manufacturing and LFP cathode supply\" (DOC_ID: mkt_supply_chain_risk).\n   3. Interpretation: This reliance poses a risk to supply continuity and pricing stability.\n   4. Implication: Invest in local battery manufacturing partnerships to reduce dependence.\n   5. Action: Initiate collaborations with Indian battery manufacturers to develop domestic supply chains.\n\n5. **Limitations**:\n   - Evidence on the effectiveness of alternative battery technologies (e.g., sodium-ion) is not robustly supported in the retrieved corpus.\n   - The image-derived quantitative claims regarding battery prices are exploratory and should be treated with caution."
+  },
+  "Q5": {
+    "query": "What is the state of EV charging and depot infrastructure in India and who should an OEM partner with?",
+    "retrievals": [
+      {
+        "sim": 0.884,
+        "doc_id": "c_5e612652559b755fbff9",
+        "modality": "text"
+      },
+      {
+        "sim": 0.884,
+        "doc_id": "c_1d1deaa46afad335ab86",
+        "modality": "text"
+      },
+      {
+        "sim": 0.868,
+        "doc_id": "mkt_mohi_charging",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.863,
+        "doc_id": "c_acc9176f6c75c01cef83",
+        "modality": "text"
+      },
+      {
+        "sim": 0.852,
+        "doc_id": "c_a62878f5624f6affcec2",
+        "modality": "text"
+      },
+      {
+        "sim": 0.852,
+        "doc_id": "c_a7a7d307229c85c05a8b",
+        "modality": "text"
+      },
+      {
+        "sim": 0.733,
+        "doc_id": "chart_chart_india_charging_2024",
+        "modality": "chart"
+      },
+      {
+        "sim": 0.681,
+        "doc_id": "55cba8f5-ec0a-4822-8a64-7e1585d14eb9",
+        "modality": "image"
+      },
+      {
+        "sim": 0.614,
+        "doc_id": "1c3f1cbe-665c-49c9-86db-ee0cb7cc5e2e",
+        "modality": "image"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: The state of EV charging infrastructure in India is developing, with approximately 25,202 public EV charging stations reported by December 2024. The government has allocated significant funds for expanding this infrastructure, indicating a commitment to support EV adoption.\n\n2. **Key evidence**:\n   - DOC_ID: mkt_mohi_charging - \"India had about 25,202 public EV charging stations by December 2024.\"\n   - DOC_ID: chart_chart_india_charging_2024 - \"Public charging stations reached 25,202 by December 2024 (PM E-DRIVE).\"\n   - DOC_ID: mkt_mohi_charging - \"The PM E-DRIVE scheme allocates Rs 10,900 crore over two years, including Rs 2,000 crore specifically for public charging stations.\"\n   - DOC_ID: c_a62878f5624f6affcec2 - \"What India needs is standardization and dedicated infrastructure.\"\n   - DOC_ID: c_a7a7d307229c85c05a8b - \"Here India don't have batteries and rare earths and we have dreams for electric vehicles.\"\n\n3. **Interpretation**: The growing number of charging stations and government investment reflects a strategic opportunity for the OEM to build partnerships with local infrastructure providers and government entities. This aligns with the Trust-backed GCC Growth thesis by fostering reliability and confidence in the EV ecosystem.\n\n4. **Recommended action**:\n   1. **Finding**: Significant government investment in EV infrastructure.\n   2. **Metric**: Rs 10,900 crore allocated for public charging stations (DOC_ID: mkt_mohi_charging).\n   3. **Interpretation**: Collaborate with government initiatives and local partners to enhance charging infrastructure.\n   4. **Implication**: Position the OEM as a trusted partner in the EV ecosystem.\n   5. **Action**: Initiate discussions with the Ministry of Heavy Industries and local charging network providers.\n\n5. **Limitations**:\n   - Evidence on the effectiveness and reliability of existing charging stations is not provided.\n   - The retrieved corpus lacks specific details on potential partners for collaboration in the charging infrastructure space."
+  },
+  "Q6": {
+    "query": "What trust, reliability, uptime and post-sale service gaps must be closed for EV buses?",
+    "retrievals": [
+      {
+        "sim": 0.9,
+        "doc_id": "c_6a9a7042354b204892d5",
+        "modality": "text"
+      },
+      {
+        "sim": 0.887,
+        "doc_id": "c_f9f6547d4eb13e256195",
+        "modality": "text"
+      },
+      {
+        "sim": 0.879,
+        "doc_id": "c_4f6814a1ede05317cbf5",
+        "modality": "text"
+      },
+      {
+        "sim": 0.878,
+        "doc_id": "c_529bc0280cec5b65e64b",
+        "modality": "text"
+      },
+      {
+        "sim": 0.869,
+        "doc_id": "c_5e068cb21aaa3cab157e",
+        "modality": "text"
+      },
+      {
+        "sim": 0.865,
+        "doc_id": "c_0ff761b629b7ad250d21",
+        "modality": "text"
+      },
+      {
+        "sim": 0.863,
+        "doc_id": "mkt_iea_global_ebus",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.695,
+        "doc_id": "6120605a-1c59-46b7-b81f-dfd785ea1e5c",
+        "modality": "image"
+      },
+      {
+        "sim": 0.676,
+        "doc_id": "EKA (4)",
+        "modality": "image"
+      },
+      {
+        "sim": 0.631,
+        "doc_id": "chart_chart_china_ebus_share",
+        "modality": "chart"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: Gaps in trust, reliability, uptime, and post-sale service for EV buses in India include concerns about manufacturing capabilities and the need for improved service infrastructure. The market is evolving rapidly, but there is still uncertainty regarding the operational readiness of manufacturers.\n\n2. **Key evidence**:\n   - DOC_ID: c_4f6814a1ede05317cbf5: \"Don't know still we have big ev bus manufacturing facilities.\"\n   - DOC_ID: c_f9f6547d4eb13e256195: \"Buses have progressed the fastest in EV adoption mainly due to government funding from states and centre.\"\n   - DOC_ID: mkt_iea_global_ebus: \"Global electric bus sales exceeded 70,000 units in 2024, up 30% year-over-year.\"\n   - DOC_ID: c_5e068cb21aaa3cab157e: \"EKA's focus on lightweight structure helps in achieving better range for their electric buses.\"\n   - DOC_ID: chart_chart_china_ebus_share: \"China's share of global electric bus sales is falling.\"\n\n3. **Interpretation**: The legacy OEM must address the perceived gaps in manufacturing capability and service reliability to build trust in the EV bus market. As the market grows, ensuring robust post-sale support will be critical to maintaining customer confidence and market share.\n\n4. **Recommended action**:\n   1. **Finding**: Uncertainty about manufacturing capabilities (DOC_ID: c_4f6814a1ede05317cbf5).\n   2. **Metric**: Assess current manufacturing facilities and capabilities.\n   3. **Interpretation**: Strengthening manufacturing infrastructure can enhance reliability and trust.\n   4. **Implication**: Invest in upgrading facilities and training to ensure high-quality production.\n   5. **Action**: Develop a comprehensive service network to support post-sale needs.\n\n5. **Limitations**:\n   - Evidence on specific service gaps and customer experiences is not detailed in the retrieved corpus.\n   - The image-derived quantitative claims are exploratory and should be treated with caution."
+  },
+  "Q7": {
+    "query": "How should a legacy Indian OEM respond to the EV-bus tender-loss narrative over the next 3 years?",
+    "retrievals": [
+      {
+        "sim": 0.876,
+        "doc_id": "c_529bc0280cec5b65e64b",
+        "modality": "text"
+      },
+      {
+        "sim": 0.863,
+        "doc_id": "c_4678cea7d2d2983e5fd2",
+        "modality": "text"
+      },
+      {
+        "sim": 0.859,
+        "doc_id": "c_ed14d16e0cdd980f8ef2",
+        "modality": "text"
+      },
+      {
+        "sim": 0.853,
+        "doc_id": "c_85935c8e71ad2d43cdf5",
+        "modality": "text"
+      },
+      {
+        "sim": 0.853,
+        "doc_id": "c_f92d7896fa0ca24d3fec",
+        "modality": "text"
+      },
+      {
+        "sim": 0.85,
+        "doc_id": "c_24de02a9002336ca1979",
+        "modality": "text"
+      },
+      {
+        "sim": 0.85,
+        "doc_id": "mkt_iea_india_fund",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.685,
+        "doc_id": "55cba8f5-ec0a-4822-8a64-7e1585d14eb9",
+        "modality": "image"
+      },
+      {
+        "sim": 0.665,
+        "doc_id": "1d4a1664-699d-4488-8634-f6bdd8553a08",
+        "modality": "image"
+      },
+      {
+        "sim": 0.664,
+        "doc_id": "chart_chart_india_ebus_stock_targets",
+        "modality": "chart"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: The legacy Indian OEM should focus on enhancing its competitive edge through innovation and strategic partnerships, while addressing the narrative of tender losses by emphasizing its established market presence and reliability. The OEM must also adapt to the evolving regulatory landscape and consumer expectations regarding electric buses.\n\n2. **Key evidence**:\n   - DOC_ID: mkt_iea_india_fund: \"India aims to reach a stock of 50,000 electric buses by 2027, supported by a USD 390 million fund backed by the Indian and US governments.\"\n   - DOC_ID: chart_chart_india_ebus_stock_targets: \"India electric bus stock and deployment targets: 3,000 in 2020 to 11,500 in 2024, 40,000 by 2027.\"\n   - DOC_ID: 1d4a1664-699d-4488-8634-f6bdd8553a08: \"Big surprise in India\u2019s largest electric bus tenders we 4 Tata Motors and VECV-two established names in commercial vehicles - were priced out of the mega electric bus tender.\"\n   - DOC_ID: c_f92d7896fa0ca24d3fec: \"Indian govt should have started manufacturing eBus instead of all this drama.\"\n   - DOC_ID: c_24de02a9002336ca1979: \"Running an ECV Bus in India is so heavy for the newbie companies.\"\n\n3. **Interpretation**: The legacy OEM's established reputation can be leveraged to regain trust and market share amidst increasing competition from newer entrants. By aligning with government initiatives and focusing on innovation, the OEM can position itself as a leader in the transition to electric mobility.\n\n4. **Recommended action**:\n   1. **Finding**: Tender losses indicate a shift in market dynamics.\n      - **Metric**: Monitor the number of tenders won by new entrants vs. established players.\n      - **Interpretation**: New entrants are gaining traction, indicating a need for innovation.\n      - **Implication**: Invest in R&D and partnerships to enhance product offerings.\n      - **Action**: Allocate resources to develop competitive electric bus models.\n   \n   2. **Finding**: Government support for electric buses is increasing.\n      - **Metric**: Track funding initiatives like the USD 390 million support.\n      - **Interpretation**: There is a favorable regulatory environment for electric buses.\n      - **Implication**: Engage with government programs to secure funding.\n      - **Action**: Formulate proposals to participate in government-backed projects.\n\n5. **Limitations**:\n   - The evidence does not provide specific data on consumer sentiment or preferences regarding electric buses.\n   - The small sample size of image-derived quantitative claims limits the reliability of market trends."
+  },
+  "Q8": {
+    "query": "What digital marketing spend, content mix and channel strategy will maximise engagement for a legacy EV bus OEM?",
+    "retrievals": [
+      {
+        "sim": 0.867,
+        "doc_id": "c_4f6814a1ede05317cbf5",
+        "modality": "text"
+      },
+      {
+        "sim": 0.852,
+        "doc_id": "c_f9f6547d4eb13e256195",
+        "modality": "text"
+      },
+      {
+        "sim": 0.844,
+        "doc_id": "c_1d1deaa46afad335ab86",
+        "modality": "text"
+      },
+      {
+        "sim": 0.841,
+        "doc_id": "c_529bc0280cec5b65e64b",
+        "modality": "text"
+      },
+      {
+        "sim": 0.84,
+        "doc_id": "c_262fdadc75b7abc8474c",
+        "modality": "text"
+      },
+      {
+        "sim": 0.839,
+        "doc_id": "c_be9b9a79c4eef23d3884",
+        "modality": "text"
+      },
+      {
+        "sim": 0.81,
+        "doc_id": "mkt_iea_global_ebus",
+        "modality": "market_text"
+      },
+      {
+        "sim": 0.68,
+        "doc_id": "6120605a-1c59-46b7-b81f-dfd785ea1e5c",
+        "modality": "image"
+      },
+      {
+        "sim": 0.66,
+        "doc_id": "EKA (4)",
+        "modality": "image"
+      },
+      {
+        "sim": 0.594,
+        "doc_id": "chart_chart_india_ebus_salesshare",
+        "modality": "chart"
+      }
+    ],
+    "llm_answer": "1. **Direct answer**: To maximize engagement for a legacy EV bus OEM, a digital marketing strategy should focus on informative content across platforms like YouTube and Reddit, emphasizing government support for EV adoption and the environmental benefits of electric buses. A balanced mix of educational videos, community discussions, and targeted ads can enhance visibility and trust.\n\n2. **Key evidence**:\n   - DOC_ID: c_f9f6547d4eb13e256195: \"Buses have progressed the fastest in EV adoption mainly due to government funding from states and centre.\"\n   - DOC_ID: mkt_iea_global_ebus: \"Global electric bus sales exceeded 70,000 units in 2024, up 30% year-over-year.\"\n   - DOC_ID: chart_chart_india_ebus_salesshare: \"India electric bus sales share projection rising to 35% by 2030 and 60% by 2035 (IEA STEPS/APS).\"\n   - DOC_ID: c_262fdadc75b7abc8474c: \"Robust renewable public transport is going to be key to reducing carbon emissions and traffic density.\"\n   - DOC_ID: c_be9b9a79c4eef23d3884: \"Why need huge batteries, create tram model electric buses with small battery and a diesel engine to make it hybrid.\"\n\n3. **Interpretation**: The increasing government support and projected growth in electric bus sales indicate a favorable market environment for EV buses. Leveraging this trend through trust-building content can position the legacy OEM as a leader in sustainable transport solutions.\n\n4. **Recommended action**:\n   1. Finding: Government funding is crucial for EV adoption (DOC_ID: c_f9f6547d4eb13e256195) -> Metric: Highlight government initiatives in marketing content -> Interpretation: Position the OEM as a partner in sustainable transport -> Implication: Build trust with stakeholders and consumers -> Action: Create a series of informative videos and articles on government EV initiatives.\n   2. Finding: Projected growth in electric bus sales (DOC_ID: chart_chart_india_ebus_salesshare) -> Metric: Use sales projections in promotional materials -> Interpretation: Showcase the OEM's alignment with market trends -> Implication: Attract potential customers and investors -> Action: Develop targeted ads emphasizing growth projections and the OEM's role in this transition.\n\n5. **Limitations**:\n   - Evidence is limited to a small sample size and may not fully represent broader market sentiments or trends.\n   - Quantitative claims derived from images are exploratory and should be treated with caution regarding their implications."
+  }
+}
