@@ -1,0 +1,65 @@
+[
+  {
+    "id": "H1",
+    "question": "Does real-operation imagery increase trust?",
+    "test": "trust for operational-proof images vs product-showcase images",
+    "result": {
+      "mean_true": 70.2,
+      "n_true": 21,
+      "mean_false": 66.9,
+      "n_false": 18,
+      "delta": 3.3
+    },
+    "reads": "positive delta => operational imagery scores higher pxy_trust"
+  },
+  {
+    "id": "H2",
+    "question": "Do bright interiors improve comfort perception?",
+    "test": "Spearman brightness vs comfort",
+    "result": {
+      "rho": 0.255,
+      "p": 0.1175,
+      "n": 39
+    },
+    "reads": "positive rho => brighter images perceived as more comfortable"
+  },
+  {
+    "id": "H3",
+    "question": "Does charging visibility improve technology perception?",
+    "test": "modernity for charger/depot-visible vs not",
+    "result": {
+      "mean_true": 93.7,
+      "n_true": 6,
+      "mean_false": 75.0,
+      "n_false": 33,
+      "delta": 18.7
+    },
+    "reads": "positive delta => charger visibility raises modernity/technology read"
+  },
+  {
+    "id": "H4",
+    "question": "Do passengers make images more relatable?",
+    "test": "visual appeal for person-present vs person-absent",
+    "result": {
+      "mean_true": 84.2,
+      "n_true": 10,
+      "mean_false": 95.4,
+      "n_false": 29,
+      "delta": -11.3
+    },
+    "reads": "positive delta => images with people score higher appeal/relatability"
+  },
+  {
+    "id": "H5",
+    "question": "Does accessibility visibility improve brand inclusiveness?",
+    "test": "accessibility perception for ramp/low-floor-visible vs not",
+    "result": {
+      "mean_true": 71.5,
+      "n_true": 3,
+      "mean_false": 55.6,
+      "n_false": 36,
+      "delta": 15.9
+    },
+    "reads": "positive delta => visible accessibility raises inclusiveness read"
+  }
+]

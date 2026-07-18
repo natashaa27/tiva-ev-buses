@@ -1,0 +1,145 @@
+{
+  "n_images": 39,
+  "low_level": {
+    "brightness": {
+      "min": 19.92,
+      "median": 96.72,
+      "mean": 105.66641025641024,
+      "max": 216.1,
+      "std": 60.589511880626034
+    },
+    "contrast": {
+      "min": 48.55,
+      "median": 63.59,
+      "mean": 66.54256410256411,
+      "max": 89.72,
+      "std": 11.39630820137744
+    },
+    "saturation": {
+      "min": 4.73,
+      "median": 62.59,
+      "mean": 63.582820512820504,
+      "max": 164.54,
+      "std": 41.260256775785805
+    },
+    "sharpness": {
+      "min": 201.76,
+      "median": 845.05,
+      "mean": 1980.7848717948723,
+      "max": 6638.78,
+      "std": 2196.962159006064
+    },
+    "warm_cool_bias": {
+      "min": -0.312,
+      "median": -0.01,
+      "mean": -0.02392307692307692,
+      "max": 0.182,
+      "std": 0.09159992663045344
+    },
+    "colourfulness": {
+      "min": 11.81,
+      "median": 47.01,
+      "mean": 46.7148717948718,
+      "max": 95.89,
+      "std": 20.4420860857145
+    },
+    "edge_density": {
+      "min": 0.032,
+      "median": 0.0691,
+      "mean": 0.08493589743589744,
+      "max": 0.1918,
+      "std": 0.045373650405792776
+    },
+    "symmetry_h": {
+      "min": 0.693,
+      "median": 0.818,
+      "mean": 0.8156666666666669,
+      "max": 0.896,
+      "std": 0.04502533399936513
+    },
+    "symmetry_v": {
+      "min": 0.571,
+      "median": 0.732,
+      "mean": 0.736846153846154,
+      "max": 0.892,
+      "std": 0.07767053849824455
+    },
+    "rule_of_thirds": {
+      "min": 0.2655,
+      "median": 0.4484,
+      "mean": 0.44047692307692304,
+      "max": 0.621,
+      "std": 0.08555680003593322
+    },
+    "visual_balance": {
+      "min": 0.603,
+      "median": 0.892,
+      "mean": 0.876025641025641,
+      "max": 0.966,
+      "std": 0.07253836994797892
+    },
+    "figure_ground_sep": {
+      "min": 0.401,
+      "median": 0.538,
+      "mean": 0.5409230769230767,
+      "max": 0.654,
+      "std": 0.06882792602432328
+    },
+    "aspect_ratio": {
+      "min": 0.461,
+      "median": 0.997,
+      "mean": 1.0762051282051281,
+      "max": 1.91,
+      "std": 0.373608941308477
+    }
+  },
+  "palette_family": {
+    "dark/black": 15,
+    "white": 8,
+    "neutral/gray": 7,
+    "cool (blue)": 5,
+    "green": 2,
+    "mixed": 1,
+    "warm (red/orange)": 1
+  },
+  "ar_bucket": {
+    "square (~1:1)": 14,
+    "portrait (<0.9)": 13,
+    "landscape (>1.1)": 12
+  },
+  "hl_setting": {
+    "infographic_text": 23,
+    "indoor_studio": 10,
+    "urban": 6
+  },
+  "high_level_flag_rates": {
+    "hl_bus_visible": 0.615,
+    "hl_passenger_driver_visible": 0.256,
+    "hl_charger_depot_flag": 0.154,
+    "hl_accessibility_flag": 0.077,
+    "hl_bus_in_motion_flag": 0.205,
+    "hl_fleet_scale_deploy": 0.179,
+    "hl_govt_handover_flag": 0.667,
+    "hl_operational_proof_flag": 0.538
+  },
+  "objects_total": {
+    "bus": 37,
+    "person": 37,
+    "truck": 10
+  },
+  "perception_proxy_mean": {
+    "trust": 68.7,
+    "modernity": 77.9,
+    "comfort": 50.5,
+    "accessibility": 56.8,
+    "env_friendliness": 57.7,
+    "operational_readiness": 40.0,
+    "visual_appeal": 92.5
+  },
+  "theme_flag_rates": {
+    "theme_technology": 0.923,
+    "theme_comfort": 0.795,
+    "theme_trust": 0.821,
+    "theme_sustainability": 0.538
+  }
+}
