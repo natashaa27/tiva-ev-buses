@@ -1,0 +1,492 @@
+<title>EV Bus Instagram Creative Teardown</title>
+<style>
+  :root{
+    --paper:#FBFBF9; --surface:#FFFFFF; --surface-2:#F5F6F4;
+    --ink:#16181D; --ink-2:#31353E; --muted:#5C6473; --faint:#8A92A0;
+    --line:#E5E7EB; --line-2:#EDEEF0;
+    --accent:#3B6FE0; --accent-soft:#E7EEFC; --teal:#12A594; --teal-soft:#E1F4F1;
+    --good:#1E9E6A; --warn:#B8791A; --warn-soft:#F8EED6; --crit:#D4483B; --crit-soft:#FBE7E4;
+    --volt:#C9A227;
+    --shadow:0 1px 2px rgba(20,22,28,.04),0 8px 24px -12px rgba(20,22,28,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SFMono-Regular",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#111318; --surface:#181B21; --surface-2:#1F232A;
+      --ink:#EAECF0; --ink-2:#C3C8D2; --muted:#98A0AE; --faint:#6B7280;
+      --line:#282C34; --line-2:#22262D;
+      --accent:#6E9BF5; --accent-soft:#1C2740; --teal:#2BB9A6; --teal-soft:#123230;
+      --good:#3FBE85; --warn:#D8A43E; --warn-soft:#33290F; --crit:#E9695B; --crit-soft:#3A1C19;
+      --volt:#D8B94A;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#FBFBF9; --surface:#FFFFFF; --surface-2:#F5F6F4; --ink:#16181D; --ink-2:#31353E;
+    --muted:#5C6473; --faint:#8A92A0; --line:#E5E7EB; --line-2:#EDEEF0;
+    --accent:#3B6FE0; --accent-soft:#E7EEFC; --teal:#12A594; --teal-soft:#E1F4F1;
+    --good:#1E9E6A; --warn:#B8791A; --warn-soft:#F8EED6; --crit:#D4483B; --crit-soft:#FBE7E4; --volt:#C9A227;
+    --shadow:0 1px 2px rgba(20,22,28,.04),0 8px 24px -12px rgba(20,22,28,.12);
+  }
+  :root[data-theme="dark"]{
+    --paper:#111318; --surface:#181B21; --surface-2:#1F232A; --ink:#EAECF0; --ink-2:#C3C8D2;
+    --muted:#98A0AE; --faint:#6B7280; --line:#282C34; --line-2:#22262D;
+    --accent:#6E9BF5; --accent-soft:#1C2740; --teal:#2BB9A6; --teal-soft:#123230;
+    --good:#3FBE85; --warn:#D8A43E; --warn-soft:#33290F; --crit:#E9695B; --crit-soft:#3A1C19; --volt:#D8B94A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  h1,h2,h3{line-height:1.15;text-wrap:balance;margin:0}
+  h2{font-size:clamp(1.5rem,3.4vw,2.15rem);font-weight:800;letter-spacing:-.02em}
+  h3{font-size:1.12rem;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+  p{margin:0 0 14px;max-width:68ch}
+  a{color:var(--accent)}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .lede{font-size:1.12rem;color:var(--ink-2);max-width:70ch}
+  .muted{color:var(--muted)}
+  code,.mono{font-family:var(--mono);font-size:.9em}
+  strong{font-weight:700}
+
+  /* HERO */
+  .hero{padding:64px 0 44px;border-top:none;position:relative;overflow:hidden}
+  .hero .eyebrow{margin-bottom:16px;display:block}
+  .hero h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:850;letter-spacing:-.035em}
+  .hero h1 .em{color:var(--accent)}
+  .hero p{margin-top:18px;font-size:1.15rem;color:var(--ink-2);max-width:64ch}
+  .herometa{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .tag{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;
+    padding:5px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+  .tag b{color:var(--ink);font-weight:700}
+
+  /* STAT ROW */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+  .stat .n{font-size:1.9rem;font-weight:820;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .stat .l{font-size:.8rem;color:var(--muted);margin-top:2px;line-height:1.35}
+  .stat.hi .n{color:var(--accent)} .stat.warnx .n{color:var(--crit)}
+
+  /* CARDS / GRID */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+  .card h3{margin-top:0}
+  .win{border-left:3px solid var(--good)} .loss{border-left:3px solid var(--crit)}
+  .card ul{margin:8px 0 0;padding-left:18px} .card li{margin-bottom:7px}
+
+  /* TABLE */
+  .twrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:560px}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line-2)}
+  thead th{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--surface-2)}
+  tbody tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .chip{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+  .chip.tata{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+  .chip.olectra{background:var(--teal-soft);color:var(--teal);border-color:transparent}
+  .chip.switch{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+
+  /* CHART */
+  .chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 20px 12px;box-shadow:var(--shadow)}
+  .chart-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .chart-h .t{font-weight:700}
+  .bar-row{display:grid;grid-template-columns:190px 1fr 66px;align-items:center;gap:12px;margin:7px 0}
+  .bar-lbl{font-size:.82rem;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar-track{background:var(--surface-2);border-radius:6px;height:22px;overflow:hidden;position:relative}
+  .bar-fill{height:100%;border-radius:6px;background:var(--accent);min-width:3px;transition:width .3s}
+  .bar-fill.flop{background:var(--crit)} .bar-fill.viral{background:var(--volt)}
+  .bar-val{font-size:.86rem;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  svg text{fill:var(--muted)}
+  .dot{fill:var(--accent);stroke:var(--surface);stroke-width:2}
+  .dot.flag{fill:var(--volt)} .dot.flop{fill:var(--crit)}
+  .gridline{stroke:var(--line);stroke-width:1}
+  .trend{stroke:var(--accent);stroke-width:2;stroke-dasharray:5 4;opacity:.55}
+
+  /* PLAYBOOK */
+  .pb{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;box-shadow:var(--shadow);overflow:hidden}
+  .pb + .pb{margin-top:16px}
+  .pb-head{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+  .pb-num{font-size:1.5rem;font-weight:820;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1}
+  .pb-head h3{margin:0}
+  .pb-body{padding:6px 22px 20px}
+  .pb-row{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-2)}
+  .pb-row:last-child{border-bottom:none}
+  .pb-row .k{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+  .pb-row .v{color:var(--ink-2)}
+  .pb-row.act .v{color:var(--ink);font-weight:600}
+  .pb-row.act .k{color:var(--accent)}
+
+  .callout{background:var(--warn-soft);border:1px solid transparent;border-radius:12px;padding:16px 18px;font-size:.92rem;color:var(--ink-2)}
+  .callout b{color:var(--ink)}
+  .footnote{font-size:.85rem;color:var(--muted)}
+  .footnote li{margin-bottom:6px}
+  hr.soft{border:none;border-top:1px solid var(--line);margin:26px 0}
+  .two-col{columns:2;column-gap:34px}
+  @media(max-width:860px){
+    .stats{grid-template-columns:repeat(2,1fr)} .grid2,.grid3{grid-template-columns:1fr}
+    .bar-row{grid-template-columns:120px 1fr 56px} .two-col{columns:1}
+    .pb-row{grid-template-columns:1fr} .pb-row .k{padding-top:0}
+  }
+</style>
+
+<div class="wrap">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <span class="eyebrow">Creative teardown · 10 Instagram posts · Indian EV-bus category</span>
+  <h1>What made the buses <span class="em">scroll-stopping</span> — and what made them invisible.</h1>
+  <p>A frame-by-frame analysis of 10 competitor posts from <b>Tata Motors, Olectra, and Switch Mobility</b>. We pulled objective pixel features from every creative, coded what each one actually shows, scored perception, and tested it all against engagement rate.</p>
+  <div class="herometa">
+    <span class="tag"><b>ER</b> = (Likes + Comments) ÷ Followers × 100</span>
+    <span class="tag">Range: <b>0.05%</b> → <b>15.1%</b></span>
+    <span class="tag"><b>3</b> brands · <b>7</b> themes</span>
+    <span class="tag muted">n = 10 · directional, not confirmatory</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat hi"><div class="n">+0.72</div><div class="l">Spearman ρ: image <b>contrast</b> vs engagement — the single strongest, only significant driver (p=0.02)</div></div>
+    <div class="stat"><div class="n">1.4×</div><div class="l">Higher engagement rate for <b>human-led</b> posts (median ER 5.55% vs 3.91% product-only)</div></div>
+    <div class="stat warnx"><div class="n">0%</div><div class="l">Posts showing <b>charging, a ramp, or a depot</b> — the entire trust toolkit is missing</div></div>
+    <div class="stat"><div class="n">−0.48</div><div class="l">ρ for <b>text-overlay %</b> vs engagement — the busier the copy, the colder the post</div></div>
+  </div>
+</header>
+
+<!-- ============ EXEC READ ============ -->
+<section>
+  <span class="eyebrow">The one-paragraph read</span>
+  <h2>Deployment proof and visual crispness win. Studio polish and copy-heavy event flyers lose.</h2>
+  <p class="lede" style="margin-top:14px">Across every test, the posts that pulled ahead did one of two things: they showed the bus <b>credibly in the real world with people</b>, or they were simply <b>sharper, higher-contrast, less cluttered</b> images. The posts that sank were beautiful-but-empty hero renders and a text-dense expo announcement. Brand size explains the raw <em>like counts</em> almost entirely (engagement scales ≈ proportionally with followers, β≈0.93 on a log-log fit) — which is exactly why we judge on <b>rate</b>, where Tata and Olectra finish nearly level.</p>
+  <div class="callout" style="margin-top:8px">
+    <b>Read this as a compass, not a verdict.</b> With 10 posts, correlations point at direction and effect size, not statistical certainty — most p-values are above 0.05 by design of the small sample. Treat the consistent <em>pattern</em> across pixel features, content codes and perception scores as the signal.
+  </div>
+</section>
+
+<!-- ============ LEADERBOARD ============ -->
+<section>
+  <span class="eyebrow">A · Descriptive — the leaderboard</span>
+  <h2>Engagement rate, best to worst</h2>
+  <p class="muted" style="margin-top:6px;margin-bottom:22px">Bars show ER%. <span style="color:var(--volt);font-weight:700">Gold</span> = viral outlier · <span style="color:var(--crit);font-weight:700">red</span> = flop. Follower base shown per bar.</p>
+  <div class="chart" id="leaderboard"></div>
+  <div class="grid3" style="margin-top:16px">
+    <div class="card win" style="padding:18px">
+      <h3 style="font-size:1rem">🏆 Top: Ultra Prime commute</h3>
+      <p class="muted" style="font-size:.9rem;margin:0">Post 1 · Tata · <b>15.1% ER</b>. Aspirational office-goers stepping off a sleek bus at a corporate campus. Bright, high-contrast, human, a real-use story — and a clear viral outlier at 23.1K likes.</p>
+    </div>
+    <div class="card" style="padding:18px;border-left:3px solid var(--teal)">
+      <h3 style="font-size:1rem">🔋 Best of the EV-natives</h3>
+      <p class="muted" style="font-size:.9rem;margin:0">Post 8 · Olectra · <b>6.2% ER</b>. "Go Electric" — sharp moving bus, driver visible, split green/urban backdrop. Highest sustainability perception in the set (5/5).</p>
+    </div>
+    <div class="card loss" style="padding:18px">
+      <h3 style="font-size:1rem">💤 Worst: Starbus Prime</h3>
+      <p class="muted" style="font-size:.9rem;margin:0">Post 7 · Tata · <b>0.05% ER</b> (67 likes on 153K). A utilitarian diesel mini-bus in dull, low-contrast traffic. Same follower base as Tata's winners — proof the <em>creative</em>, not reach, sank it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WORKED / DIDN'T ============ -->
+<section>
+  <span class="eyebrow">The pattern</span>
+  <h2>What worked, what didn't</h2>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card win">
+      <h3>✅ Worked</h3>
+      <ul>
+        <li><b>Real-world deployment with people.</b> Buses operating on recognisable streets, passengers and drivers visible (Posts 1, 3, 8, 10).</li>
+        <li><b>High contrast &amp; sharpness.</b> Crisp, punchy images out-performed soft, flat ones on every cut (ρ = +0.72 / +0.59).</li>
+        <li><b>An aspirational human story.</b> "Productive workday", "trust it to get you there" — outcomes, not spec sheets.</li>
+        <li><b>A single, confident subject.</b> One hero bus, clean figure-ground, minimal competing copy.</li>
+        <li><b>Green / sustainability framing</b> nudged both engagement (median 5.9% vs 4.0%) and perceived sustainability (4.5 vs 3.0).</li>
+      </ul>
+    </div>
+    <div class="card loss">
+      <h3>✖️ Didn't work</h3>
+      <ul>
+        <li><b>Utilitarian product shots with no story.</b> The diesel Starbus Prime in flat traffic collapsed to 0.05% ER.</li>
+        <li><b>Copy-dense event flyers.</b> The Prawaas 5.0 announcement (30% text overlay) under-performed the fleet's own average.</li>
+        <li><b>Beautiful-but-empty hero renders.</b> The Switch double-decker at the Gateway of India looked stunning but showed no operation, no people → 0.68%.</li>
+        <li><b>Studio VFX over proof.</b> Lightning-bolt and light-trail renders (Posts 9, 10) scored high on <em>modernity</em> but lower on <em>trust</em> and operational readiness.</li>
+        <li><b>Silence on the things buyers actually de-risk on</b> — charging, range-in-practice, accessibility, servicing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE VS ENGAGEMENT ============ -->
+<section>
+  <span class="eyebrow">B · Feature-vs-engagement</span>
+  <h2>Which visual features move the needle</h2>
+  <p class="muted" style="margin-top:6px;margin-bottom:22px">Spearman correlation of each low-level feature against engagement rate. Longer bar = stronger relationship; blue = positive, red = negative.</p>
+  <div class="chart" id="corrchart"></div>
+
+  <div class="grid2" style="margin-top:22px">
+    <div class="chart">
+      <div class="chart-h"><span class="t">Image contrast vs engagement rate</span><span class="muted" style="font-size:.8rem">ρ = 0.72 · p = 0.02</span></div>
+      <div id="scatter"></div>
+      <p class="muted" style="font-size:.82rem;margin:10px 4px 4px">Every post above 68 contrast beat every post below 60. The relationship holds even after removing the viral outlier (ρ = 0.61).</p>
+    </div>
+    <div class="card">
+      <h3>Binary features (Mann–Whitney U)</h3>
+      <div class="twrap" style="box-shadow:none;border:none">
+        <table style="min-width:0">
+          <thead><tr><th>Feature present</th><th class="num">ER on</th><th class="num">ER off</th><th class="num">p</th></tr></thead>
+          <tbody>
+            <tr><td>Human present</td><td class="num">5.55</td><td class="num">3.91</td><td class="num">0.22</td></tr>
+            <tr><td>Green / environmental</td><td class="num">5.85</td><td class="num">4.03</td><td class="num">0.18</td></tr>
+            <tr><td>Driver visible</td><td class="num">4.97</td><td class="num">4.03</td><td class="num">0.76</td></tr>
+            <tr><td>Real deployment</td><td class="num">4.39</td><td class="num">3.91</td><td class="num">0.55</td></tr>
+            <tr><td>Performance metric</td><td class="num">4.14</td><td class="num">4.54</td><td class="num">0.84</td></tr>
+            <tr><td>Fleet-scale</td><td class="num">3.89</td><td class="num">4.26</td><td class="num">0.89</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:.82rem;margin:12px 4px 0">Medians favour human &amp; green content, but none clear significance at n=10 — directional evidence, consistent with the pixel-level and perception results.</p>
+    </div>
+  </div>
+  <p class="muted" style="font-size:.85rem;margin-top:16px">Kruskal–Wallis across the 7 communication themes: H = 5.65, p = 0.46 — too few posts per theme (mostly n=1) to separate theme effects statistically. Reported for completeness.</p>
+</section>
+
+<!-- ============ LEGACY VS NEW-AGE ============ -->
+<section>
+  <span class="eyebrow">D · Legacy vs new-age</span>
+  <h2>Tata plays human &amp; polished; the EV-natives play colour &amp; cause</h2>
+  <p class="muted" style="margin-top:6px;margin-bottom:20px">Legacy = Tata Motors. New-age = Olectra + Switch (EV-native brands). On <b>rate</b> they finish level; the difference is in <em>how</em> they persuade.</p>
+  <div class="twrap">
+    <table>
+      <thead><tr><th>Dimension</th><th class="num">Legacy (Tata)</th><th class="num">New-age (Olectra/Switch)</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td>Median engagement rate</td><td class="num">4.73%</td><td class="num">4.26%</td><td>Near parity on rate…</td></tr>
+        <tr><td>Median likes / post</td><td class="num">7,206</td><td class="num">1,490</td><td>…but 4.8× raw reach from base size</td></tr>
+        <tr><td>Human present</td><td class="num">75%</td><td class="num">33%</td><td>Tata leads with people</td></tr>
+        <tr><td>Performance metric shown</td><td class="num">75%</td><td class="num">33%</td><td>Tata badges specs (kWh, engine)</td></tr>
+        <tr><td>Colourfulness (0–100)</td><td class="num">46</td><td class="num">70</td><td>EV-natives are far more saturated</td></tr>
+        <tr><td>Perceived modernity (1–5)</td><td class="num">4.25</td><td class="num">3.67</td><td>Tata's VFX reads more modern</td></tr>
+        <tr><td>Perceived sustainability (1–5)</td><td class="num">2.75</td><td class="num">3.67</td><td>EV-natives own the green story</td></tr>
+        <tr><td>Perceived operational readiness</td><td class="num">3.25</td><td class="num">3.83</td><td>Olectra's record/street proof lands</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid3" style="margin-top:18px">
+    <div class="card" style="padding:18px"><h3 style="font-size:.98rem"><span class="chip tata">Tata</span> ER 4.73%</h3><p class="muted" style="font-size:.88rem;margin:8px 0 0">Widest spread — from a 15.1% viral commute story to a 0.05% diesel flop. Human-led + spec badges + studio polish. Wins modernity, weakest on sustainability.</p></div>
+    <div class="card" style="padding:18px"><h3 style="font-size:.98rem"><span class="chip olectra">Olectra</span> ER 4.46%</h3><p class="muted" style="font-size:.88rem;margin:8px 0 0">The most <em>consistent</em> performer (4.1–6.2%, tight band). Heritage &amp; record proof, real streets, boldest colour. Best operational-readiness perception.</p></div>
+    <div class="card" style="padding:18px"><h3 style="font-size:.98rem"><span class="chip switch">Switch</span> ER 1.96%</h3><p class="muted" style="font-size:.88rem;margin:8px 0 0">Most striking art direction, weakest engagement. Hero renders and an event flyer — beauty without operation or people. Clear headroom.</p></div>
+  </div>
+</section>
+
+<!-- ============ PERCEPTION ============ -->
+<section>
+  <span class="eyebrow">Perception layer</span>
+  <h2>Engagement ≠ what the image said</h2>
+  <p style="margin-top:6px">Each creative was rated 1–5 on trust, modernity, comfort, accessibility, sustainability, operational readiness and appeal. Holding the perception scores against the content codes gives clean, directionally strong links:</p>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card">
+      <ul style="margin:0;padding-left:18px">
+        <li><b>Real-operation → trust.</b> Deployment images averaged <b>4.0/5</b> trust vs <b>3.2</b> for studio/product shots.</li>
+        <li><b>Green context → sustainability.</b> <b>4.5</b> vs <b>3.0</b> — the clearest perception jump in the set.</li>
+        <li><b>Bright interiors/scenes → comfort.</b> The brighter half scored <b>3.0</b> vs <b>2.2</b>.</li>
+        <li><b>VFX spec renders → modernity, not trust.</b> Posts 9 &amp; 10 top modernity (5/5) yet sit mid-pack on trust and low on operational readiness.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Does perception track engagement?</h3>
+      <p class="muted" style="font-size:.92rem">Rank-correlation of perceived scores with actual ER:</p>
+      <div class="bar-row" style="grid-template-columns:150px 1fr 50px"><div class="bar-lbl">Trust</div><div class="bar-track"><div class="bar-fill" style="width:43%"></div></div><div class="bar-val">.43</div></div>
+      <div class="bar-row" style="grid-template-columns:150px 1fr 50px"><div class="bar-lbl">Appeal</div><div class="bar-track"><div class="bar-fill" style="width:36%"></div></div><div class="bar-val">.36</div></div>
+      <div class="bar-row" style="grid-template-columns:150px 1fr 50px"><div class="bar-lbl">Modernity</div><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><div class="bar-val">.28</div></div>
+      <p class="muted" style="font-size:.82rem;margin-top:12px">Perceived <b>trust</b> is the perception dimension most aligned with real engagement — reinforcing that credibility, not gloss, is what the audience rewards.</p>
+    </div>
+  </div>
+  <p class="footnote" style="margin-top:16px">⚠︎ Perception here is a single systematic coder. For a decision-grade read, have 2–3 independent coders (or a small respondent panel) rate each image and average — the method and scales above are built to drop straight in.</p>
+</section>
+
+<!-- ============ PLAYBOOK ============ -->
+<section>
+  <span class="eyebrow">The playbook</span>
+  <h2>Five moves, each earned by the data</h2>
+  <p class="muted" style="margin-top:6px;margin-bottom:24px">Finding → Evidence → Interpretation → Campaign implication → Action.</p>
+
+  <div class="pb">
+    <div class="pb-head"><span class="pb-num">01</span><h3>Lead with real-operation proof, not studio hero shots</h3></div>
+    <div class="pb-body">
+      <div class="pb-row"><span class="k">Finding</span><span class="v">Real-deployment images earn higher trust and engagement than isolated product renders.</span></div>
+      <div class="pb-row"><span class="k">Evidence</span><span class="v">Deployment posts: trust 4.0 vs 3.2; the two pure hero renders (Switch double-decker, Ultra EV VFX) sit at 0.68% and 3.9% ER.</span></div>
+      <div class="pb-row"><span class="k">Interpretation</span><span class="v">Audiences read "it's actually running" as credibility; a beauty render reads as a promise, not a proof.</span></div>
+      <div class="pb-row"><span class="k">Implication</span><span class="v">Product photography alone is insufficient for a trust-led, procurement-facing category.</span></div>
+      <div class="pb-row act"><span class="k">Action</span><span class="v">Shoot buses operating on recognisable routes with visible passengers; pair with a verifiable uptime or fleet-size number.</span></div>
+    </div>
+  </div>
+
+  <div class="pb">
+    <div class="pb-head"><span class="pb-num">02</span><h3>Fill the trust vacuum: charging, depot, accessibility, uptime</h3></div>
+    <div class="pb-body">
+      <div class="pb-row"><span class="k">Finding</span><span class="v">Zero of 10 posts show charging, a ramp/accessibility, or a depot/maintenance scene.</span></div>
+      <div class="pb-row"><span class="k">Evidence</span><span class="v">0% charging · 0% accessibility · 0% depot · only 20% fleet-scale · only 20% government livery.</span></div>
+      <div class="pb-row"><span class="k">Interpretation</span><span class="v">The category ignores exactly the cues its dominant buyer (STUs, fleet operators) uses to de-risk a purchase.</span></div>
+      <div class="pb-row"><span class="k">Implication</span><span class="v">Whoever fills this space owns the "execution capability" narrative uncontested.</span></div>
+      <div class="pb-row act"><span class="k">Action</span><span class="v">Commission a "proof" content pillar: depot charging at scale, low-floor ramp boarding, maintenance crews, and a live uptime/route-km counter.</span></div>
+    </div>
+  </div>
+
+  <div class="pb">
+    <div class="pb-head"><span class="pb-num">03</span><h3>Win on craft: high contrast, sharp, low text</h3></div>
+    <div class="pb-body">
+      <div class="pb-row"><span class="k">Finding</span><span class="v">Crisper, higher-contrast, lower-text images consistently out-engage soft, copy-heavy ones.</span></div>
+      <div class="pb-row"><span class="k">Evidence</span><span class="v">Contrast ρ = +0.72 (p=0.02); sharpness ρ = +0.59; text-overlay ρ = −0.48. The 30%-text expo flyer under-performed its own fleet.</span></div>
+      <div class="pb-row"><span class="k">Interpretation</span><span class="v">On a fast feed, punchy figure-ground stops the thumb; dense copy signals "ad" and gets skipped.</span></div>
+      <div class="pb-row"><span class="k">Implication</span><span class="v">Production craft is a measurable performance lever, not a nice-to-have.</span></div>
+      <div class="pb-row act"><span class="k">Action</span><span class="v">Set a creative standard: one headline ≤7 words, text overlay under ~15% of frame, strong subject-background separation, deep blacks.</span></div>
+    </div>
+  </div>
+
+  <div class="pb">
+    <div class="pb-head"><span class="pb-num">04</span><h3>Put people in the frame — and sell the outcome</h3></div>
+    <div class="pb-body">
+      <div class="pb-row"><span class="k">Finding</span><span class="v">Human-led creatives out-engage product-only ones; the top post is a pure human-outcome story.</span></div>
+      <div class="pb-row"><span class="k">Evidence</span><span class="v">Human median ER 5.55% vs 3.91%; the "productive workday" commute post hit 15.1% — the campaign's ceiling.</span></div>
+      <div class="pb-row"><span class="k">Interpretation</span><span class="v">People buy the outcome (an easy commute, a cleaner city), and relate to faces more than sheet metal.</span></div>
+      <div class="pb-row"><span class="k">Implication</span><span class="v">The bus should be the enabler of a human moment, not the subject of a portrait.</span></div>
+      <div class="pb-row act"><span class="k">Action</span><span class="v">Cast real riders — commuters, women, elderly, families, wheelchair users boarding — and frame the benefit to them, not the spec.</span></div>
+    </div>
+  </div>
+
+  <div class="pb">
+    <div class="pb-head"><span class="pb-num">05</span><h3>Match the visual to the audience you're de-risking</h3></div>
+    <div class="pb-body">
+      <div class="pb-row"><span class="k">Finding</span><span class="v">Different perception levers fire for different content — trust from operation, sustainability from green context, modernity from spec/VFX.</span></div>
+      <div class="pb-row"><span class="k">Evidence</span><span class="v">Green context → sustainability 4.5 vs 3.0; VFX → modernity 5/5; real ops → trust 4.0 vs 3.2.</span></div>
+      <div class="pb-row"><span class="k">Interpretation</span><span class="v">One creative can't carry every message; the visual has to be chosen for the outcome that audience needs.</span></div>
+      <div class="pb-row"><span class="k">Implication</span><span class="v">Plan the grid by audience-outcome, not by product-launch calendar.</span></div>
+      <div class="pb-row act"><span class="k">Action</span><span class="v">Use the audience matrix below to brief each creative to a single desired outcome and its proven visual.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCE MATRIX ============ -->
+<section>
+  <span class="eyebrow">Brief-ready</span>
+  <h2>Audience → outcome → visual</h2>
+  <div class="twrap" style="margin-top:18px">
+    <table>
+      <thead><tr><th>Audience</th><th>Desired outcome</th><th>Recommended visual</th><th>Backed by</th></tr></thead>
+      <tbody>
+        <tr><td><b>Government / fleet operators</b></td><td>Trust &amp; execution capability</td><td>Fleet at scale, depot charging, maintenance crews, uptime/route-km proof</td><td class="muted">Move 01, 02 · trust gap</td></tr>
+        <tr><td><b>Passengers</b></td><td>Comfort &amp; accessibility</td><td>Bright interiors, real riders, low-floor boarding &amp; ramps in use</td><td class="muted">Move 04 · bright→comfort</td></tr>
+        <tr><td><b>EV / tech audience</b></td><td>Modernity</td><td>Charging, cockpit, telematics, battery ecosystem, clean spec badges</td><td class="muted">VFX→modernity 5/5</td></tr>
+        <tr><td><b>General public</b></td><td>Sustainability</td><td>Bus operating in a recognisable city with human &amp; green context</td><td class="muted">green→sustain 4.5</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ METHOD / CAVEATS ============ -->
+<section>
+  <span class="eyebrow">Method &amp; caveats — read before quoting a number</span>
+  <h2>How this was built</h2>
+  <div class="two-col" style="margin-top:16px">
+    <p><b>Low-level features</b> (brightness, saturation, contrast, colourfulness, warm/cool ratio, blue-green proportion, edge density, sharpness, symmetry, dominant colour) were computed in Python (OpenCV/PIL) on each creative after auto-cropping the Instagram chrome.</p>
+    <p><b>High-level content</b> (25+ flags — exterior/interior/cockpit, charging, real-road, fleet, passengers, driver, vulnerable riders, ramp, depot, government, urban/green, performance metric, product-vs-human, studio-vs-real) and <b>communication theme</b> were hand-coded from visual inspection.</p>
+    <p><b>Perception</b> (trust, modernity, comfort, accessibility, sustainability, operational readiness, appeal) was scored 1–5 by one systematic coder.</p>
+    <p><b>Tests</b>: Spearman (numeric), Mann–Whitney U (binary), Kruskal–Wallis (themes), plus a log-log OLS sanity-check separating follower base from creative effect.</p>
+  </div>
+  <hr class="soft">
+  <ul class="footnote">
+    <li><b>Sample size (n = 10).</b> Everything here is directional. Most results won't reach p&lt;0.05 at this size; the value is the consistent pattern across independent method layers.</li>
+    <li><b>Follower counts.</b> Tata 153K, Switch 41K, Hinduja 13K are verified. <b>Olectra ≈ 35K is an estimate</b> (exact count wasn't retrievable) — Olectra's ER <em>level</em> shifts if the true figure differs, though its rank order within Olectra is unaffected.</li>
+    <li><b>Collab posts.</b> Two posts are collaborations (Hinduja×Switch, Switch×Prawaas); real reach spans both audiences, so their ER is conservative.</li>
+    <li><b>Viral outlier.</b> Post 1's 23.1K likes (15.1% ER) is far above the field; key correlations are reported with and without it.</li>
+    <li><b>Rendered creatives.</b> All 10 appear to be AI-composited/rendered rather than photographed — a finding in itself: the category has little genuine on-road documentary imagery.</li>
+    <li><b>Single perception coder.</b> Upgrade to 2–3 coders or a respondent panel before this drives spend.</li>
+    <li><b>No video in this set.</b> The 10 assets are static posts; the video-analysis framework (hook, scene changes, screen-time, CTA) applies when reels are added.</li>
+  </ul>
+</section>
+
+<footer style="padding:36px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem">
+  EV-bus Instagram creative teardown · Tata Motors · Olectra · Switch Mobility · Full dataset exported to <span class="mono">campaign_dataset.csv</span>.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  // ---------- LEADERBOARD ----------
+  var posts=[
+    {p:1, name:"Ultra Prime commute", brand:"Tata", er:15.14, fol:"153K", kind:"viral"},
+    {p:8, name:"Go Electric city EV", brand:"Olectra", er:6.15, fol:"~35K"},
+    {p:10,name:"Starbus EV", brand:"Tata", er:5.55, fol:"153K"},
+    {p:6, name:"Silence / fleet", brand:"Olectra", er:4.54, fol:"~35K"},
+    {p:3, name:"2016 first EV", brand:"Olectra", er:4.39, fol:"~35K"},
+    {p:4, name:"Limca 13,000ft record", brand:"Olectra", er:4.14, fol:"~35K"},
+    {p:9, name:"Ultra EV 200kWh", brand:"Tata", er:3.91, fol:"153K"},
+    {p:5, name:"Prawaas 5.0 fleet", brand:"Switch", er:3.24, fol:"41K"},
+    {p:2, name:"Switch double-decker", brand:"Switch", er:0.68, fol:"13K"},
+    {p:7, name:"Starbus Prime diesel", brand:"Tata", er:0.05, fol:"153K", kind:"flop"}
+  ];
+  var max=15.14, lb=document.getElementById('leaderboard'), h="";
+  posts.forEach(function(d){
+    var w=Math.max(d.er/max*100,1.2);
+    var cls=d.kind==='viral'?'viral':(d.kind==='flop'?'flop':'');
+    var bc={Tata:'tata',Olectra:'olectra',Switch:'switch'}[d.brand];
+    h+='<div class="bar-row"><div class="bar-lbl"><span class="chip '+bc+'">'+d.brand+'</span> '+d.name+' <span class="muted" style="font-size:.75rem">· '+d.fol+'</span></div>'
+      +'<div class="bar-track"><div class="bar-fill '+cls+'" style="width:'+w+'%"></div></div>'
+      +'<div class="bar-val">'+d.er.toFixed(2)+'%</div></div>';
+  });
+  lb.innerHTML=h;
+
+  // ---------- CORRELATION BARS ----------
+  var corr=[
+    {f:"Contrast", r:0.72},{f:"Sharpness", r:0.59},{f:"Edge density", r:0.58},
+    {f:"Brightness", r:0.27},{f:"Bus-to-image area", r:0.20},{f:"Colourfulness", r:0.18},
+    {f:"Blue/green proportion", r:-0.15},{f:"Background clutter", r:-0.11},
+    {f:"Negative space", r:-0.29},{f:"Text-overlay %", r:-0.48}
+  ];
+  var cc=document.getElementById('corrchart'), ch="";
+  corr.forEach(function(d){
+    var pct=Math.abs(d.r)*100/0.8*0.5; // scale to half-width (center axis)
+    var pos=d.r>=0;
+    ch+='<div class="bar-row" style="grid-template-columns:170px 1fr 52px">'
+      +'<div class="bar-lbl">'+d.f+'</div>'
+      +'<div class="bar-track" style="background:linear-gradient(90deg,transparent 49.6%,var(--line) 49.6%,var(--line) 50.4%,transparent 50.4%)">'
+      +'<div class="bar-fill" style="position:absolute;top:0;'
+      +(pos?('left:50%;background:var(--accent);'):('right:50%;background:var(--crit);'))
+      +'width:'+pct+'%"></div></div>'
+      +'<div class="bar-val" style="color:'+(pos?'var(--accent)':'var(--crit)')+'">'+(pos?'+':'')+d.r.toFixed(2)+'</div></div>';
+  });
+  cc.innerHTML=ch;
+
+  // ---------- SCATTER: contrast vs ER ----------
+  var data=[
+    {p:1,x:74.0,y:15.14,k:'flag'},{p:2,x:56.3,y:0.68},{p:3,x:56.1,y:4.39},
+    {p:4,x:65.6,y:4.14},{p:5,x:56.1,y:3.24},{p:6,x:64.1,y:4.54},
+    {p:7,x:56.5,y:0.05,k:'flop'},{p:8,x:72.7,y:6.15},{p:9,x:69.9,y:3.91},{p:10,x:70.5,y:5.55}
+  ];
+  var W=560,H=340,pl=44,pr=16,pt=16,pb=40, iw=W-pl-pr, ih=H-pt-pb;
+  var xmin=52,xmax=76, ymin=0,ymax=16;
+  function X(v){return pl+(v-xmin)/(xmax-xmin)*iw}
+  function Y(v){return pt+(1-(v-ymin)/(ymax-ymin))*ih}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="Scatter of image contrast versus engagement rate">';
+  // gridlines y
+  [0,4,8,12,16].forEach(function(v){s+='<line class="gridline" x1="'+pl+'" y1="'+Y(v)+'" x2="'+(W-pr)+'" y2="'+Y(v)+'"/>'
+    +'<text x="'+(pl-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11">'+v+'%</text>';});
+  // x ticks
+  [55,60,65,70,75].forEach(function(v){s+='<text x="'+X(v)+'" y="'+(H-14)+'" text-anchor="middle" font-size="11">'+v+'</text>';});
+  s+='<text x="'+(pl+iw/2)+'" y="'+(H-1)+'" text-anchor="middle" font-size="11">Image contrast (luminance SD)</text>';
+  // trend line (approx through cloud)
+  s+='<line class="trend" x1="'+X(54)+'" y1="'+Y(1.2)+'" x2="'+X(75)+'" y2="'+Y(8.5)+'"/>';
+  // dots
+  data.forEach(function(d){
+    var cls=d.k==='flag'?'dot flag':(d.k==='flop'?'dot flop':'dot');
+    s+='<circle class="'+cls+'" cx="'+X(d.x)+'" cy="'+Y(d.y)+'" r="6"><title>Post '+d.p+' · contrast '+d.x+' · ER '+d.y+'%</title></circle>';
+  });
+  // labels for notable
+  s+='<text x="'+(X(74)-10)+'" y="'+(Y(15.14)+4)+'" text-anchor="end" font-size="10.5" style="fill:var(--volt)">P1 viral</text>';
+  s+='<text x="'+(X(56.5)+10)+'" y="'+(Y(0.05)+3)+'" font-size="10.5" style="fill:var(--crit)">P7 flop</text>';
+  s+='<text x="'+(X(72.7)+9)+'" y="'+(Y(6.15)+3)+'" font-size="10.5">P8</text>';
+  s+='<text x="'+(X(70.5)+9)+'" y="'+(Y(5.55)+3)+'" font-size="10.5">P10</text>';
+  s+='</svg>';
+  document.getElementById('scatter').innerHTML=s;
+})();
+</script>
