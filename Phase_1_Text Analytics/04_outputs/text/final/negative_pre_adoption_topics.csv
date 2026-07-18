@@ -1,0 +1,7 @@
+subgroup,subgroup_total_n,topic_id,final_topic_label,document_count,prevalence_within_subgroup_pct,small_subgroup_warning
+negative_pre_adoption,11,2,"Battery Technology, Swapping & Lifecycle Economics",3,27.272727272727277,
+negative_pre_adoption,11,1,"Indian EV-Bus Adoption: R&D, Operations & User Experience",3,27.272727272727277,
+negative_pre_adoption,11,0,Public Transport Economics & Government Operating Models,2,18.181818181818183,
+negative_pre_adoption,11,6,"New-Age OEM Execution, Reliability & Service Risk",1,9.090909090909092,
+negative_pre_adoption,11,7,"Supply-Chain Risk, Charging Alternatives & Service Gaps",1,9.090909090909092,
+negative_pre_adoption,11,4,"Domestic Manufacturing, R&D & China Dependence",1,9.090909090909092,

@@ -1,0 +1,17 @@
+scope_name,lifecycle_stage_auto,row_count,sample_size,percent,small_sample_flag
+all_corpus,general_unspecified,449,548,81.93430656934306,False
+all_corpus,post_use,65,548,11.861313868613138,False
+all_corpus,pre_adoption,20,548,3.6496350364963503,False
+all_corpus,procurement,14,548,2.5547445255474455,False
+consumer_sentiment,general_unspecified,365,438,83.33333333333333,False
+consumer_sentiment,post_use,43,438,9.817351598173516,False
+consumer_sentiment,pre_adoption,17,438,3.8812785388127855,False
+consumer_sentiment,procurement,13,438,2.9680365296803655,False
+consumer_topic,general_unspecified,362,435,83.2183908045977,False
+consumer_topic,post_use,43,435,9.885057471264368,False
+consumer_topic,pre_adoption,17,435,3.9080459770114944,False
+consumer_topic,procurement,13,435,2.9885057471264367,False
+industry_topic,general_unspecified,366,441,82.99319727891157,False
+industry_topic,post_use,44,441,9.977324263038549,False
+industry_topic,pre_adoption,17,441,3.854875283446712,False
+industry_topic,procurement,14,441,3.1746031746031744,False

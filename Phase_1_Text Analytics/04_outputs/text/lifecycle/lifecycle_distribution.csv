@@ -1,0 +1,5 @@
+lifecycle_stage_auto,row_count,sample_size,percent,small_sample_flag
+pre_adoption,20,548,3.6496350364963503,False
+procurement,14,548,2.5547445255474455,False
+post_use,65,548,11.861313868613138,False
+general_unspecified,449,548,81.93430656934306,False

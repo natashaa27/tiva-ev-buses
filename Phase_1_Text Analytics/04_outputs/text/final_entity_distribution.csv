@@ -1,0 +1,9 @@
+entity_name_canonical,entity_type,oem_group,total_rows,consumer_sentiment_eligible_final,consumer_topic_eligible_final,industry_topic_eligible_final
+EKA Mobility,OEM,new_age,9,7,7,8
+General/Industry,General/Industry,not_applicable,382,352,349,349
+JBM Auto,OEM,legacy,20,11,11,11
+NueGo,Operator,not_applicable,66,38,38,38
+Olectra Greentech,OEM,new_age,20,7,7,9
+PMI Electro,OEM,new_age,20,6,6,8
+Switch Mobility,OEM,new_age,10,7,7,8
+Tata Motors,OEM,legacy,21,10,10,10

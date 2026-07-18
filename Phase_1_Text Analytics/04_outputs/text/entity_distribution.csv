@@ -1,0 +1,9 @@
+entity_name_canonical,entity_type,oem_group,row_count,percent_of_rows
+General/Industry,General/Industry,not_applicable,382,69.71
+NueGo,Operator,not_applicable,66,12.04
+Tata Motors,OEM,legacy,21,3.83
+JBM Auto,OEM,legacy,20,3.65
+Olectra Greentech,OEM,new_age,20,3.65
+PMI Electro,OEM,new_age,20,3.65
+Switch Mobility,OEM,new_age,10,1.82
+EKA Mobility,OEM,new_age,9,1.64

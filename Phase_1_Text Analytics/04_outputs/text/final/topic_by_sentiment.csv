@@ -1,0 +1,25 @@
+dominant_topic_id,dimension,group_value,percent,row_count,final_topic_label
+0,sentiment_label,Negative,21.666666666666668,13,Public Transport Economics & Government Operating Models
+0,sentiment_label,Neutral,36.66666666666666,22,Public Transport Economics & Government Operating Models
+0,sentiment_label,Positive,41.66666666666667,25,Public Transport Economics & Government Operating Models
+1,sentiment_label,Negative,22.950819672131143,14,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+1,sentiment_label,Neutral,26.229508196721312,16,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+1,sentiment_label,Positive,50.81967213114754,31,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+2,sentiment_label,Negative,16.27906976744186,7,"Battery Technology, Swapping & Lifecycle Economics"
+2,sentiment_label,Neutral,39.53488372093023,17,"Battery Technology, Swapping & Lifecycle Economics"
+2,sentiment_label,Positive,44.18604651162791,19,"Battery Technology, Swapping & Lifecycle Economics"
+3,sentiment_label,Negative,17.307692307692307,9,"Public Infrastructure, Funding & Alternative Transit"
+3,sentiment_label,Neutral,23.07692307692308,12,"Public Infrastructure, Funding & Alternative Transit"
+3,sentiment_label,Positive,59.61538461538461,31,"Public Infrastructure, Funding & Alternative Transit"
+4,sentiment_label,Negative,20.967741935483872,13,"Domestic Manufacturing, R&D & China Dependence"
+4,sentiment_label,Neutral,22.58064516129032,14,"Domestic Manufacturing, R&D & China Dependence"
+4,sentiment_label,Positive,56.451612903225815,35,"Domestic Manufacturing, R&D & China Dependence"
+5,sentiment_label,Negative,14.893617021276595,7,"Tender Economics, Public Funding & Private Operators"
+5,sentiment_label,Neutral,23.404255319148938,11,"Tender Economics, Public Funding & Private Operators"
+5,sentiment_label,Positive,61.70212765957447,29,"Tender Economics, Public Funding & Private Operators"
+6,sentiment_label,Negative,19.047619047619047,8,"New-Age OEM Execution, Reliability & Service Risk"
+6,sentiment_label,Neutral,28.57142857142857,12,"New-Age OEM Execution, Reliability & Service Risk"
+6,sentiment_label,Positive,52.38095238095239,22,"New-Age OEM Execution, Reliability & Service Risk"
+7,sentiment_label,Negative,27.27272727272727,12,"Supply-Chain Risk, Charging Alternatives & Service Gaps"
+7,sentiment_label,Neutral,18.181818181818183,8,"Supply-Chain Risk, Charging Alternatives & Service Gaps"
+7,sentiment_label,Positive,54.54545454545454,24,"Supply-Chain Risk, Charging Alternatives & Service Gaps"

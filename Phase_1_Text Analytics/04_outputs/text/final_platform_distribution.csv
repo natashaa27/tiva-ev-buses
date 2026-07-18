@@ -1,0 +1,9 @@
+platform_canonical,total_rows,consumer_sentiment_eligible_final,consumer_topic_eligible_final,industry_topic_eligible_final
+Facebook,9,6,6,6
+Forum,67,37,37,37
+Instagram,9,6,6,6
+LinkedIn,8,0,0,2
+News/Media,6,0,0,4
+Reddit,28,23,23,23
+Review Platform,42,21,21,21
+YouTube,379,345,342,342

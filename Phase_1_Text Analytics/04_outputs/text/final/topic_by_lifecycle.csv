@@ -1,0 +1,33 @@
+dominant_topic_id,dimension,group_value,percent,row_count,final_topic_label
+0,lifecycle_stage_final,general_unspecified,78.33333333333333,47,Public Transport Economics & Government Operating Models
+0,lifecycle_stage_final,post_use,10.0,6,Public Transport Economics & Government Operating Models
+0,lifecycle_stage_final,pre_adoption,8.333333333333332,5,Public Transport Economics & Government Operating Models
+0,lifecycle_stage_final,procurement,3.333333333333333,2,Public Transport Economics & Government Operating Models
+1,lifecycle_stage_final,general_unspecified,59.01639344262295,36,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+1,lifecycle_stage_final,post_use,14.754098360655735,9,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+1,lifecycle_stage_final,pre_adoption,16.39344262295082,10,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+1,lifecycle_stage_final,procurement,9.836065573770492,6,"Indian EV-Bus Adoption: R&D, Operations & User Experience"
+2,lifecycle_stage_final,general_unspecified,69.76744186046511,30,"Battery Technology, Swapping & Lifecycle Economics"
+2,lifecycle_stage_final,post_use,0.0,0,"Battery Technology, Swapping & Lifecycle Economics"
+2,lifecycle_stage_final,pre_adoption,30.23255813953488,13,"Battery Technology, Swapping & Lifecycle Economics"
+2,lifecycle_stage_final,procurement,0.0,0,"Battery Technology, Swapping & Lifecycle Economics"
+3,lifecycle_stage_final,general_unspecified,76.92307692307693,40,"Public Infrastructure, Funding & Alternative Transit"
+3,lifecycle_stage_final,post_use,13.461538461538462,7,"Public Infrastructure, Funding & Alternative Transit"
+3,lifecycle_stage_final,pre_adoption,3.8461538461538463,2,"Public Infrastructure, Funding & Alternative Transit"
+3,lifecycle_stage_final,procurement,5.769230769230769,3,"Public Infrastructure, Funding & Alternative Transit"
+4,lifecycle_stage_final,general_unspecified,53.2258064516129,33,"Domestic Manufacturing, R&D & China Dependence"
+4,lifecycle_stage_final,post_use,17.741935483870968,11,"Domestic Manufacturing, R&D & China Dependence"
+4,lifecycle_stage_final,pre_adoption,24.193548387096776,15,"Domestic Manufacturing, R&D & China Dependence"
+4,lifecycle_stage_final,procurement,4.838709677419355,3,"Domestic Manufacturing, R&D & China Dependence"
+5,lifecycle_stage_final,general_unspecified,82.97872340425532,39,"Tender Economics, Public Funding & Private Operators"
+5,lifecycle_stage_final,post_use,10.638297872340424,5,"Tender Economics, Public Funding & Private Operators"
+5,lifecycle_stage_final,pre_adoption,2.127659574468085,1,"Tender Economics, Public Funding & Private Operators"
+5,lifecycle_stage_final,procurement,4.25531914893617,2,"Tender Economics, Public Funding & Private Operators"
+6,lifecycle_stage_final,general_unspecified,71.42857142857143,30,"New-Age OEM Execution, Reliability & Service Risk"
+6,lifecycle_stage_final,post_use,23.809523809523807,10,"New-Age OEM Execution, Reliability & Service Risk"
+6,lifecycle_stage_final,pre_adoption,2.380952380952381,1,"New-Age OEM Execution, Reliability & Service Risk"
+6,lifecycle_stage_final,procurement,2.380952380952381,1,"New-Age OEM Execution, Reliability & Service Risk"
+7,lifecycle_stage_final,general_unspecified,90.9090909090909,40,"Supply-Chain Risk, Charging Alternatives & Service Gaps"
+7,lifecycle_stage_final,post_use,2.272727272727273,1,"Supply-Chain Risk, Charging Alternatives & Service Gaps"
+7,lifecycle_stage_final,pre_adoption,2.272727272727273,1,"Supply-Chain Risk, Charging Alternatives & Service Gaps"
+7,lifecycle_stage_final,procurement,4.545454545454546,2,"Supply-Chain Risk, Charging Alternatives & Service Gaps"

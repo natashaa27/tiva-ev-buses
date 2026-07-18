@@ -1,0 +1,15 @@
+metric_type,group,precision,recall,f1,reviewed_support,correct,total,agreement_rate
+overall_exact_agreement,all_reviewed,,,,120,67,120,0.558333
+agreement_by_automated_class,pre_adoption,,,,18,16,18,0.888889
+agreement_by_automated_class,procurement,,,,10,10,10,1.0
+agreement_by_automated_class,post_use,,,,25,23,25,0.92
+agreement_by_automated_class,general_unspecified,,,,67,18,67,0.268657
+agreement_by_automated_confidence,high,,,,25,23,25,0.92
+agreement_by_automated_confidence,medium,,,,34,32,34,0.941176
+agreement_by_automated_confidence,low,,,,61,12,61,0.196721
+classification_metric,pre_adoption,0.888889,0.313725,0.463768,51,16,51,0.313725
+classification_metric,procurement,1.0,0.625,0.769231,16,10,16,0.625
+classification_metric,post_use,0.92,0.676471,0.779661,34,23,34,0.676471
+classification_metric,general_unspecified,0.268657,0.947368,0.418605,19,18,19,0.947368
+classification_average,macro_average,0.769386,0.640641,0.607816,120,67,120,0.558333
+classification_average,weighted_average,0.814315,0.558333,0.586849,120,67,120,0.558333

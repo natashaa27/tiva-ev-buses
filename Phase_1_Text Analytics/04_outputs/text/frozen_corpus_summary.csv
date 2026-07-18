@@ -1,0 +1,29 @@
+section,metric,row_count,definition,percent_of_548
+headline,total_retained_rows,548,Rows in frozen corpus,100.0
+headline,unique_comment_ids,548,Unique non-null comment IDs,100.0
+headline,human_reviewed_rows,107,Rows with completed manual review,19.53
+headline,non_reviewed_rows,441,Rows retaining automated values,80.47
+eligibility,automated_sentiment_eligible,460,V2 automated field,83.94
+eligibility,final_sentiment_eligible,444,After human corrections,81.02
+eligibility,automated_topic_model_eligible,456,V2 automated field,83.21
+eligibility,final_topic_model_eligible,441,After human corrections,80.47
+eligibility,consumer_sentiment_eligible,438,Audience-only final control,79.93
+eligibility,consumer_topic_eligible,435,Audience-only final control,79.38
+eligibility,industry_topic_eligible,441,Audience plus media/research final control,80.47
+quality,duplicate_representatives,59,One representative per duplicate cluster,10.77
+quality,duplicate_copies,59,Non-representative clustered rows,10.77
+quality,creator_or_brand_rows,3,Final speaker role,0.55
+quality,media_or_research_rows,23,Final speaker role,4.2
+quality,unknown_speaker_rows,0,Final speaker role,0.0
+quality,off_topic_rows,1,Existing quality flag,0.18
+changes,speaker_role_changes,11,Reviewed rows changed from automated role,2.01
+changes,sentiment_eligibility_changes,16,Reviewed rows changed from automated eligibility,2.92
+changes,topic_eligibility_changes,15,Reviewed rows changed from automated eligibility,2.74
+changes,rows_with_any_changed_classification,18,Reviewed rows with at least one changed value,3.28
+speaker_role_before,audience_user,531,Automated speaker-role distribution,96.9
+speaker_role_before,creator_or_brand,2,Automated speaker-role distribution,0.36
+speaker_role_before,media_or_research,14,Automated speaker-role distribution,2.55
+speaker_role_before,unknown,1,Automated speaker-role distribution,0.18
+speaker_role_after,audience_user,522,Final speaker-role distribution,95.26
+speaker_role_after,creator_or_brand,3,Final speaker-role distribution,0.55
+speaker_role_after,media_or_research,23,Final speaker-role distribution,4.2

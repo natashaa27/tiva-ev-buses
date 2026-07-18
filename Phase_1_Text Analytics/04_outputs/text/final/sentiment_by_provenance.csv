@@ -1,0 +1,4 @@
+provenance,eligible_n,positive_count,positive_pct,neutral_count,neutral_pct,negative_count,negative_pct,mean_compound,median_compound,small_sample_flag
+ai_compiled_secondary,90,51,56.666666666666664,21,23.333333333333332,18,20.0,0.20782444444444445,0.2918,False
+direct_platform_export_unlinked,342,170,49.707602339181285,107,31.28654970760234,65,19.005847953216374,0.1715812865497076,0.0346,False
+mixed_or_uncertain,6,4,66.66666666666667,0,0.0,2,33.333333333333336,0.14719999999999997,0.2532,True

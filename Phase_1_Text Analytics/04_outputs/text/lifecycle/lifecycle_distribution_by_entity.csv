@@ -1,0 +1,213 @@
+scope_name,dimension,group_value,lifecycle_stage_auto,row_count,sample_size,percent,small_sample_flag
+all_corpus,entity_name_canonical,EKA Mobility,general_unspecified,9,9,100.0,True
+all_corpus,entity_name_canonical,General/Industry,general_unspecified,341,382,89.26701570680628,False
+all_corpus,entity_name_canonical,General/Industry,post_use,14,382,3.6649214659685865,False
+all_corpus,entity_name_canonical,General/Industry,pre_adoption,14,382,3.6649214659685865,False
+all_corpus,entity_name_canonical,General/Industry,procurement,13,382,3.4031413612565444,False
+all_corpus,entity_name_canonical,JBM Auto,general_unspecified,18,20,90.0,False
+all_corpus,entity_name_canonical,JBM Auto,post_use,2,20,10.0,False
+all_corpus,entity_name_canonical,NueGo,general_unspecified,25,66,37.878787878787875,False
+all_corpus,entity_name_canonical,NueGo,post_use,37,66,56.06060606060606,False
+all_corpus,entity_name_canonical,NueGo,pre_adoption,4,66,6.0606060606060606,False
+all_corpus,entity_name_canonical,Olectra Greentech,general_unspecified,13,20,65.0,False
+all_corpus,entity_name_canonical,Olectra Greentech,post_use,7,20,35.0,False
+all_corpus,entity_name_canonical,PMI Electro,general_unspecified,20,20,100.0,False
+all_corpus,entity_name_canonical,Switch Mobility,general_unspecified,7,10,70.0,True
+all_corpus,entity_name_canonical,Switch Mobility,post_use,2,10,20.0,True
+all_corpus,entity_name_canonical,Switch Mobility,procurement,1,10,10.0,True
+all_corpus,entity_name_canonical,Tata Motors,general_unspecified,16,21,76.19047619047619,False
+all_corpus,entity_name_canonical,Tata Motors,post_use,3,21,14.285714285714286,False
+all_corpus,entity_name_canonical,Tata Motors,pre_adoption,2,21,9.523809523809524,False
+consumer_sentiment,entity_name_canonical,EKA Mobility,general_unspecified,7,7,100.0,True
+consumer_sentiment,entity_name_canonical,General/Industry,general_unspecified,311,352,88.35227272727273,False
+consumer_sentiment,entity_name_canonical,General/Industry,post_use,14,352,3.977272727272727,False
+consumer_sentiment,entity_name_canonical,General/Industry,pre_adoption,14,352,3.977272727272727,False
+consumer_sentiment,entity_name_canonical,General/Industry,procurement,13,352,3.6931818181818183,False
+consumer_sentiment,entity_name_canonical,JBM Auto,general_unspecified,10,11,90.9090909090909,True
+consumer_sentiment,entity_name_canonical,JBM Auto,post_use,1,11,9.090909090909092,True
+consumer_sentiment,entity_name_canonical,NueGo,general_unspecified,14,38,36.8421052631579,False
+consumer_sentiment,entity_name_canonical,NueGo,post_use,22,38,57.89473684210526,False
+consumer_sentiment,entity_name_canonical,NueGo,pre_adoption,2,38,5.2631578947368425,False
+consumer_sentiment,entity_name_canonical,Olectra Greentech,general_unspecified,4,7,57.142857142857146,True
+consumer_sentiment,entity_name_canonical,Olectra Greentech,post_use,3,7,42.857142857142854,True
+consumer_sentiment,entity_name_canonical,PMI Electro,general_unspecified,6,6,100.0,True
+consumer_sentiment,entity_name_canonical,Switch Mobility,general_unspecified,5,7,71.42857142857143,True
+consumer_sentiment,entity_name_canonical,Switch Mobility,post_use,2,7,28.571428571428573,True
+consumer_sentiment,entity_name_canonical,Tata Motors,general_unspecified,8,10,80.0,True
+consumer_sentiment,entity_name_canonical,Tata Motors,post_use,1,10,10.0,True
+consumer_sentiment,entity_name_canonical,Tata Motors,pre_adoption,1,10,10.0,True
+consumer_topic,entity_name_canonical,EKA Mobility,general_unspecified,7,7,100.0,True
+consumer_topic,entity_name_canonical,General/Industry,general_unspecified,308,349,88.25214899713467,False
+consumer_topic,entity_name_canonical,General/Industry,post_use,14,349,4.011461318051576,False
+consumer_topic,entity_name_canonical,General/Industry,pre_adoption,14,349,4.011461318051576,False
+consumer_topic,entity_name_canonical,General/Industry,procurement,13,349,3.7249283667621778,False
+consumer_topic,entity_name_canonical,JBM Auto,general_unspecified,10,11,90.9090909090909,True
+consumer_topic,entity_name_canonical,JBM Auto,post_use,1,11,9.090909090909092,True
+consumer_topic,entity_name_canonical,NueGo,general_unspecified,14,38,36.8421052631579,False
+consumer_topic,entity_name_canonical,NueGo,post_use,22,38,57.89473684210526,False
+consumer_topic,entity_name_canonical,NueGo,pre_adoption,2,38,5.2631578947368425,False
+consumer_topic,entity_name_canonical,Olectra Greentech,general_unspecified,4,7,57.142857142857146,True
+consumer_topic,entity_name_canonical,Olectra Greentech,post_use,3,7,42.857142857142854,True
+consumer_topic,entity_name_canonical,PMI Electro,general_unspecified,6,6,100.0,True
+consumer_topic,entity_name_canonical,Switch Mobility,general_unspecified,5,7,71.42857142857143,True
+consumer_topic,entity_name_canonical,Switch Mobility,post_use,2,7,28.571428571428573,True
+consumer_topic,entity_name_canonical,Tata Motors,general_unspecified,8,10,80.0,True
+consumer_topic,entity_name_canonical,Tata Motors,post_use,1,10,10.0,True
+consumer_topic,entity_name_canonical,Tata Motors,pre_adoption,1,10,10.0,True
+industry_topic,entity_name_canonical,EKA Mobility,general_unspecified,8,8,100.0,True
+industry_topic,entity_name_canonical,General/Industry,general_unspecified,308,349,88.25214899713467,False
+industry_topic,entity_name_canonical,General/Industry,post_use,14,349,4.011461318051576,False
+industry_topic,entity_name_canonical,General/Industry,pre_adoption,14,349,4.011461318051576,False
+industry_topic,entity_name_canonical,General/Industry,procurement,13,349,3.7249283667621778,False
+industry_topic,entity_name_canonical,JBM Auto,general_unspecified,10,11,90.9090909090909,True
+industry_topic,entity_name_canonical,JBM Auto,post_use,1,11,9.090909090909092,True
+industry_topic,entity_name_canonical,NueGo,general_unspecified,14,38,36.8421052631579,False
+industry_topic,entity_name_canonical,NueGo,post_use,22,38,57.89473684210526,False
+industry_topic,entity_name_canonical,NueGo,pre_adoption,2,38,5.2631578947368425,False
+industry_topic,entity_name_canonical,Olectra Greentech,general_unspecified,5,9,55.55555555555556,True
+industry_topic,entity_name_canonical,Olectra Greentech,post_use,4,9,44.44444444444444,True
+industry_topic,entity_name_canonical,PMI Electro,general_unspecified,8,8,100.0,True
+industry_topic,entity_name_canonical,Switch Mobility,general_unspecified,5,8,62.5,True
+industry_topic,entity_name_canonical,Switch Mobility,post_use,2,8,25.0,True
+industry_topic,entity_name_canonical,Switch Mobility,procurement,1,8,12.5,True
+industry_topic,entity_name_canonical,Tata Motors,general_unspecified,8,10,80.0,True
+industry_topic,entity_name_canonical,Tata Motors,post_use,1,10,10.0,True
+industry_topic,entity_name_canonical,Tata Motors,pre_adoption,1,10,10.0,True
+all_corpus,entity_type,General/Industry,general_unspecified,341,382,89.26701570680628,False
+all_corpus,entity_type,General/Industry,post_use,14,382,3.6649214659685865,False
+all_corpus,entity_type,General/Industry,pre_adoption,14,382,3.6649214659685865,False
+all_corpus,entity_type,General/Industry,procurement,13,382,3.4031413612565444,False
+all_corpus,entity_type,OEM,general_unspecified,83,100,83.0,False
+all_corpus,entity_type,OEM,post_use,14,100,14.0,False
+all_corpus,entity_type,OEM,pre_adoption,2,100,2.0,False
+all_corpus,entity_type,OEM,procurement,1,100,1.0,False
+all_corpus,entity_type,Operator,general_unspecified,25,66,37.878787878787875,False
+all_corpus,entity_type,Operator,post_use,37,66,56.06060606060606,False
+all_corpus,entity_type,Operator,pre_adoption,4,66,6.0606060606060606,False
+consumer_sentiment,entity_type,General/Industry,general_unspecified,311,352,88.35227272727273,False
+consumer_sentiment,entity_type,General/Industry,post_use,14,352,3.977272727272727,False
+consumer_sentiment,entity_type,General/Industry,pre_adoption,14,352,3.977272727272727,False
+consumer_sentiment,entity_type,General/Industry,procurement,13,352,3.6931818181818183,False
+consumer_sentiment,entity_type,OEM,general_unspecified,40,48,83.33333333333333,False
+consumer_sentiment,entity_type,OEM,post_use,7,48,14.583333333333334,False
+consumer_sentiment,entity_type,OEM,pre_adoption,1,48,2.0833333333333335,False
+consumer_sentiment,entity_type,Operator,general_unspecified,14,38,36.8421052631579,False
+consumer_sentiment,entity_type,Operator,post_use,22,38,57.89473684210526,False
+consumer_sentiment,entity_type,Operator,pre_adoption,2,38,5.2631578947368425,False
+consumer_topic,entity_type,General/Industry,general_unspecified,308,349,88.25214899713467,False
+consumer_topic,entity_type,General/Industry,post_use,14,349,4.011461318051576,False
+consumer_topic,entity_type,General/Industry,pre_adoption,14,349,4.011461318051576,False
+consumer_topic,entity_type,General/Industry,procurement,13,349,3.7249283667621778,False
+consumer_topic,entity_type,OEM,general_unspecified,40,48,83.33333333333333,False
+consumer_topic,entity_type,OEM,post_use,7,48,14.583333333333334,False
+consumer_topic,entity_type,OEM,pre_adoption,1,48,2.0833333333333335,False
+consumer_topic,entity_type,Operator,general_unspecified,14,38,36.8421052631579,False
+consumer_topic,entity_type,Operator,post_use,22,38,57.89473684210526,False
+consumer_topic,entity_type,Operator,pre_adoption,2,38,5.2631578947368425,False
+industry_topic,entity_type,General/Industry,general_unspecified,308,349,88.25214899713467,False
+industry_topic,entity_type,General/Industry,post_use,14,349,4.011461318051576,False
+industry_topic,entity_type,General/Industry,pre_adoption,14,349,4.011461318051576,False
+industry_topic,entity_type,General/Industry,procurement,13,349,3.7249283667621778,False
+industry_topic,entity_type,OEM,general_unspecified,44,54,81.48148148148148,False
+industry_topic,entity_type,OEM,post_use,8,54,14.814814814814815,False
+industry_topic,entity_type,OEM,pre_adoption,1,54,1.8518518518518519,False
+industry_topic,entity_type,OEM,procurement,1,54,1.8518518518518519,False
+industry_topic,entity_type,Operator,general_unspecified,14,38,36.8421052631579,False
+industry_topic,entity_type,Operator,post_use,22,38,57.89473684210526,False
+industry_topic,entity_type,Operator,pre_adoption,2,38,5.2631578947368425,False
+all_corpus,oem_group,legacy,general_unspecified,34,41,82.92682926829268,False
+all_corpus,oem_group,legacy,post_use,5,41,12.195121951219512,False
+all_corpus,oem_group,legacy,pre_adoption,2,41,4.878048780487805,False
+all_corpus,oem_group,new_age,general_unspecified,49,59,83.05084745762711,False
+all_corpus,oem_group,new_age,post_use,9,59,15.254237288135593,False
+all_corpus,oem_group,new_age,procurement,1,59,1.694915254237288,False
+all_corpus,oem_group,not_applicable,general_unspecified,366,448,81.69642857142857,False
+all_corpus,oem_group,not_applicable,post_use,51,448,11.383928571428571,False
+all_corpus,oem_group,not_applicable,pre_adoption,18,448,4.017857142857143,False
+all_corpus,oem_group,not_applicable,procurement,13,448,2.9017857142857144,False
+consumer_sentiment,oem_group,legacy,general_unspecified,18,21,85.71428571428571,False
+consumer_sentiment,oem_group,legacy,post_use,2,21,9.523809523809524,False
+consumer_sentiment,oem_group,legacy,pre_adoption,1,21,4.761904761904762,False
+consumer_sentiment,oem_group,new_age,general_unspecified,22,27,81.48148148148148,False
+consumer_sentiment,oem_group,new_age,post_use,5,27,18.51851851851852,False
+consumer_sentiment,oem_group,not_applicable,general_unspecified,325,390,83.33333333333333,False
+consumer_sentiment,oem_group,not_applicable,post_use,36,390,9.23076923076923,False
+consumer_sentiment,oem_group,not_applicable,pre_adoption,16,390,4.102564102564102,False
+consumer_sentiment,oem_group,not_applicable,procurement,13,390,3.3333333333333335,False
+consumer_topic,oem_group,legacy,general_unspecified,18,21,85.71428571428571,False
+consumer_topic,oem_group,legacy,post_use,2,21,9.523809523809524,False
+consumer_topic,oem_group,legacy,pre_adoption,1,21,4.761904761904762,False
+consumer_topic,oem_group,new_age,general_unspecified,22,27,81.48148148148148,False
+consumer_topic,oem_group,new_age,post_use,5,27,18.51851851851852,False
+consumer_topic,oem_group,not_applicable,general_unspecified,322,387,83.20413436692506,False
+consumer_topic,oem_group,not_applicable,post_use,36,387,9.30232558139535,False
+consumer_topic,oem_group,not_applicable,pre_adoption,16,387,4.134366925064599,False
+consumer_topic,oem_group,not_applicable,procurement,13,387,3.359173126614987,False
+industry_topic,oem_group,legacy,general_unspecified,18,21,85.71428571428571,False
+industry_topic,oem_group,legacy,post_use,2,21,9.523809523809524,False
+industry_topic,oem_group,legacy,pre_adoption,1,21,4.761904761904762,False
+industry_topic,oem_group,new_age,general_unspecified,26,33,78.78787878787878,False
+industry_topic,oem_group,new_age,post_use,6,33,18.181818181818183,False
+industry_topic,oem_group,new_age,procurement,1,33,3.0303030303030303,False
+industry_topic,oem_group,not_applicable,general_unspecified,322,387,83.20413436692506,False
+industry_topic,oem_group,not_applicable,post_use,36,387,9.30232558139535,False
+industry_topic,oem_group,not_applicable,pre_adoption,16,387,4.134366925064599,False
+industry_topic,oem_group,not_applicable,procurement,13,387,3.359173126614987,False
+all_corpus,speaker_role_final,audience_user,general_unspecified,425,522,81.4176245210728,False
+all_corpus,speaker_role_final,audience_user,post_use,64,522,12.260536398467433,False
+all_corpus,speaker_role_final,audience_user,pre_adoption,20,522,3.8314176245210727,False
+all_corpus,speaker_role_final,audience_user,procurement,13,522,2.4904214559386975,False
+all_corpus,speaker_role_final,creator_or_brand,general_unspecified,3,3,100.0,True
+all_corpus,speaker_role_final,media_or_research,general_unspecified,21,23,91.30434782608695,False
+all_corpus,speaker_role_final,media_or_research,post_use,1,23,4.3478260869565215,False
+all_corpus,speaker_role_final,media_or_research,procurement,1,23,4.3478260869565215,False
+consumer_sentiment,speaker_role_final,audience_user,general_unspecified,365,438,83.33333333333333,False
+consumer_sentiment,speaker_role_final,audience_user,post_use,43,438,9.817351598173516,False
+consumer_sentiment,speaker_role_final,audience_user,pre_adoption,17,438,3.8812785388127855,False
+consumer_sentiment,speaker_role_final,audience_user,procurement,13,438,2.9680365296803655,False
+consumer_topic,speaker_role_final,audience_user,general_unspecified,362,435,83.2183908045977,False
+consumer_topic,speaker_role_final,audience_user,post_use,43,435,9.885057471264368,False
+consumer_topic,speaker_role_final,audience_user,pre_adoption,17,435,3.9080459770114944,False
+consumer_topic,speaker_role_final,audience_user,procurement,13,435,2.9885057471264367,False
+industry_topic,speaker_role_final,audience_user,general_unspecified,362,435,83.2183908045977,False
+industry_topic,speaker_role_final,audience_user,post_use,43,435,9.885057471264368,False
+industry_topic,speaker_role_final,audience_user,pre_adoption,17,435,3.9080459770114944,False
+industry_topic,speaker_role_final,audience_user,procurement,13,435,2.9885057471264367,False
+industry_topic,speaker_role_final,media_or_research,general_unspecified,4,6,66.66666666666667,True
+industry_topic,speaker_role_final,media_or_research,post_use,1,6,16.666666666666668,True
+industry_topic,speaker_role_final,media_or_research,procurement,1,6,16.666666666666668,True
+all_corpus,provenance,ai_compiled_secondary,general_unspecified,116,167,69.46107784431138,False
+all_corpus,provenance,ai_compiled_secondary,post_use,44,167,26.347305389221557,False
+all_corpus,provenance,ai_compiled_secondary,pre_adoption,6,167,3.592814371257485,False
+all_corpus,provenance,ai_compiled_secondary,procurement,1,167,0.5988023952095808,False
+all_corpus,provenance,direct_platform_export_unlinked,general_unspecified,331,372,88.97849462365592,False
+all_corpus,provenance,direct_platform_export_unlinked,post_use,14,372,3.763440860215054,False
+all_corpus,provenance,direct_platform_export_unlinked,pre_adoption,14,372,3.763440860215054,False
+all_corpus,provenance,direct_platform_export_unlinked,procurement,13,372,3.4946236559139785,False
+all_corpus,provenance,mixed_or_uncertain,general_unspecified,2,9,22.22222222222222,True
+all_corpus,provenance,mixed_or_uncertain,post_use,7,9,77.77777777777777,True
+consumer_sentiment,provenance,ai_compiled_secondary,general_unspecified,64,90,71.11111111111111,False
+consumer_sentiment,provenance,ai_compiled_secondary,post_use,23,90,25.555555555555557,False
+consumer_sentiment,provenance,ai_compiled_secondary,pre_adoption,3,90,3.3333333333333335,False
+consumer_sentiment,provenance,direct_platform_export_unlinked,general_unspecified,301,342,88.01169590643275,False
+consumer_sentiment,provenance,direct_platform_export_unlinked,post_use,14,342,4.093567251461988,False
+consumer_sentiment,provenance,direct_platform_export_unlinked,pre_adoption,14,342,4.093567251461988,False
+consumer_sentiment,provenance,direct_platform_export_unlinked,procurement,13,342,3.801169590643275,False
+consumer_sentiment,provenance,mixed_or_uncertain,post_use,6,6,100.0,True
+consumer_topic,provenance,ai_compiled_secondary,general_unspecified,64,90,71.11111111111111,False
+consumer_topic,provenance,ai_compiled_secondary,post_use,23,90,25.555555555555557,False
+consumer_topic,provenance,ai_compiled_secondary,pre_adoption,3,90,3.3333333333333335,False
+consumer_topic,provenance,direct_platform_export_unlinked,general_unspecified,298,339,87.90560471976401,False
+consumer_topic,provenance,direct_platform_export_unlinked,post_use,14,339,4.129793510324483,False
+consumer_topic,provenance,direct_platform_export_unlinked,pre_adoption,14,339,4.129793510324483,False
+consumer_topic,provenance,direct_platform_export_unlinked,procurement,13,339,3.8348082595870205,False
+consumer_topic,provenance,mixed_or_uncertain,post_use,6,6,100.0,True
+industry_topic,provenance,ai_compiled_secondary,general_unspecified,68,96,70.83333333333333,False
+industry_topic,provenance,ai_compiled_secondary,post_use,24,96,25.0,False
+industry_topic,provenance,ai_compiled_secondary,pre_adoption,3,96,3.125,False
+industry_topic,provenance,ai_compiled_secondary,procurement,1,96,1.0416666666666667,False
+industry_topic,provenance,direct_platform_export_unlinked,general_unspecified,298,339,87.90560471976401,False
+industry_topic,provenance,direct_platform_export_unlinked,post_use,14,339,4.129793510324483,False
+industry_topic,provenance,direct_platform_export_unlinked,pre_adoption,14,339,4.129793510324483,False
+industry_topic,provenance,direct_platform_export_unlinked,procurement,13,339,3.8348082595870205,False
+industry_topic,provenance,mixed_or_uncertain,post_use,6,6,100.0,True

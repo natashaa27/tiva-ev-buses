@@ -1,0 +1,2 @@
+eligible_n,positive_count,positive_pct,neutral_count,neutral_pct,negative_count,negative_pct,mean_compound,median_compound,small_sample_flag
+438,225,51.36986301369863,128,29.22374429223744,85,19.40639269406393,0.17869452054794518,0.0772,False

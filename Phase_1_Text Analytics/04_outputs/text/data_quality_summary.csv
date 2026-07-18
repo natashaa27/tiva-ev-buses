@@ -1,0 +1,22 @@
+section,metric,count,percent_of_input,definition
+row_flow,input_rows,548,100.0,Rows in approved interim input
+row_flow,output_rows,548,100.0,"Rows retained in processed corpus, including flagged/excluded records"
+row_flow,analysis_eligible_rows,548,100.0,Rows not automatically excluded
+row_flow,automatically_excluded_rows,0,0.0,"Rows excluded only for blank, URL-only, or emoji-only text"
+quality_flag,duplicate_text,0,0.0,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,near_duplicate_text,118,21.53,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,very_short_text,13,2.37,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,emoji_only_text,0,0.0,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,possible_promotional_text,5,0.91,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,possible_brand_authored_content,0,0.0,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,possible_off_topic_content,1,0.18,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,missing_source_information,379,69.16,Non-exclusive flag; rows may appear in multiple metrics
+quality_flag,hinglish_or_code_switched,36,6.57,Non-exclusive flag; rows may appear in multiple metrics
+exclusion_reason,blank_text,0,0.0,Automatic exclusion reason
+exclusion_reason,url_only_text,0,0.0,Automatic exclusion reason
+exclusion_reason,emoji_only_text,0,0.0,Automatic exclusion reason
+missing_value,missing_source,0,0.0,Blank values in source
+missing_value,missing_url,379,69.16,Blank values in url
+missing_value,missing_date,379,69.16,Blank values in date
+missing_value,missing_entity_name_original,0,0.0,Blank values in entity_name_original
+missing_value,missing_raw_text,0,0.0,Blank values in raw_text

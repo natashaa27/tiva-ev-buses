@@ -1,0 +1,215 @@
+{
+  "version": "lifecycle_rules_v1.0",
+  "seed": 42,
+  "controlled_labels": [
+    "pre_adoption",
+    "procurement",
+    "post_use",
+    "general_unspecified"
+  ],
+  "minimum_stage_score": 2,
+  "tie_policy": "Assign general_unspecified for unresolved top-score ties; retain all tied/multiple stages as secondary flags and require manual review.",
+  "evidence_precedence": "Explicit actual-use evidence outranks hypothetical language; explicit procurement phrases remain procurement evidence. Speaker/source support is never decisive alone.",
+  "observed_hinglish_tokens": [
+    "aap",
+    "aapko",
+    "agar",
+    "aur",
+    "bhai",
+    "bhi",
+    "hai",
+    "hain",
+    "hum",
+    "ka",
+    "kar",
+    "karo",
+    "ke",
+    "ki",
+    "ko",
+    "kya",
+    "lekin",
+    "mat",
+    "mein",
+    "nahi",
+    "nhi",
+    "paisa",
+    "par",
+    "raha",
+    "rahi",
+    "se",
+    "sirf",
+    "toh",
+    "wala",
+    "ye"
+  ],
+  "rules": {
+    "pre_adoption": [
+      {
+        "rule_id": "PRE01",
+        "pattern": "\\brange anxiety\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRE02",
+        "pattern": "\\bcharging infrastructure\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRE03",
+        "pattern": "\\b(charging availability|charging station|charging network)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRE04",
+        "pattern": "\\b(worth buying|should (?:i |we )?buy|planning to buy|purchase intent)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRE05",
+        "pattern": "\\b(need|needs|require|required|lack|without|not enough)\\b.{0,35}\\b(charging|infrastructure|range)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRE06",
+        "pattern": "\\b(diesel|cng)\\b.{0,30}\\b(compare|comparison|versus|vs\\.?|better|worse|than)\\b|\\b(compare|comparison|versus|vs\\.?|better|worse|than)\\b.{0,30}\\b(diesel|cng)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRE07",
+        "pattern": "\\b(affordability|feasibility|viability|adoption barrier|future of electric bus(?:es)?)\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "PRE08",
+        "pattern": "\\b(battery swap|battery swapping|solar panel|solar penal)\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "PRE09",
+        "pattern": "\\b(expensive|price|cost|range|battery|infrastructure|adoption|pollution|environment)\\b",
+        "weight": 1,
+        "strength": "weak"
+      },
+      {
+        "rule_id": "PRE10",
+        "pattern": "\\b(chahiye|kaise|kya)\\b.{0,35}\\b(bus|battery|charging|electric)\\b|\\b(bus|battery|charging|electric)\\b.{0,35}\\b(chahiye|kaise|kya)\\b",
+        "weight": 1,
+        "strength": "weak"
+      }
+    ],
+    "procurement": [
+      {
+        "rule_id": "PRO01",
+        "pattern": "\\b(tender|tenders|bid|bidding|lowest bidder|\\bl1\\b)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRO02",
+        "pattern": "\\b(gross cost contract|\\bgcc\\b|per km|per kilometre|assured kilometres?)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRO03",
+        "pattern": "\\b(tender awarded|contract awarded|order received|order awarded|won (?:the )?order|secured (?:an? |the )?order)\\b",
+        "weight": 4,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRO04",
+        "pattern": "\\b(government order|order allocation|fleet purchase|subsidy scheme|delivery commitment|order book)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "PRO05",
+        "pattern": "\\b(government|state|agency|corporation)\\b.{0,35}\\b(order|contract|tender|procure)\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "PRO06",
+        "pattern": "\\b(supply|deliver|delivery)\\b.{0,30}\\b\\d+\\s+(?:electric\\s+)?buses\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "PRO07",
+        "pattern": "\\b(procure|procurement|contract|award|order|fleet)\\b",
+        "weight": 1,
+        "strength": "weak"
+      },
+      {
+        "rule_id": "PRO08",
+        "pattern": "\\b(paisa|kharidne|theka)\\b.{0,30}\\b(bus|tender|order)\\b|\\b(bus|tender|order)\\b.{0,30}\\b(paisa|kharidne|theka)\\b",
+        "weight": 1,
+        "strength": "weak"
+      }
+    ],
+    "post_use": [
+      {
+        "rule_id": "POST01",
+        "pattern": "\\b(i travelled|i traveled|i used|my experience|on my route|i took (?:the |a )?bus|travelled in|traveled in)\\b",
+        "weight": 4,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "POST02",
+        "pattern": "\\b(broke down|breakdown|not working|stopped working|customer care|service centre|service center)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "POST03",
+        "pattern": "\\b(refund|cancelled|canceled|cancellation|pnr|booking|ticket)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "POST04",
+        "pattern": "\\b(ride quality|seat comfort|ac was|air conditioning|luggage|driver|conductor|staff behaviour|staff behavior)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "POST05",
+        "pattern": "\\b(delay|delayed|waiting|waited|late|route|maintenance|charging time)\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "POST06",
+        "pattern": "\\b(my|meri|maine|mai|i|we)\\b.{0,45}\\b(bus|ride|travel|trip|booking|ticket|route|refund|driver|staff|delay)\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "POST07",
+        "pattern": "\\b(bus|ride|travel|trip|booking|ticket|route|refund|driver|staff|delay)\\b.{0,45}\\b(my|meri|maine|mai|i|we)\\b",
+        "weight": 2,
+        "strength": "medium"
+      },
+      {
+        "rule_id": "POST08",
+        "pattern": "\\b(meri bus thi|jarha hu|ja raha hu|paisa wapas|nahi aayi|nahi aya)\\b",
+        "weight": 3,
+        "strength": "strong"
+      },
+      {
+        "rule_id": "POST09",
+        "pattern": "\\b(service|comfort|smooth|clean|dirty|crowded|experience)\\b",
+        "weight": 1,
+        "strength": "weak"
+      }
+    ]
+  }
+}

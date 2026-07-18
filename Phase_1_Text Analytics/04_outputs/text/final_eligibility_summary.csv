@@ -1,0 +1,29 @@
+section,metric,row_count,definition,percent_of_548
+headline,retained_rows,548,All approved v1 rows retained,100.0
+headline,duplicate_clusters,59,Connected components from near_duplicate_partner,10.77
+headline,duplicate_representatives,59,Exactly one per duplicate cluster,10.77
+headline,duplicate_copies,59,Cluster members other than representative,10.77
+headline,sentiment_eligible_rows,460,Rows eligible for later sentiment analysis,83.94
+headline,topic_model_eligible_rows,456,Rows eligible for later topic modelling,83.21
+headline,creator_or_brand_flags,2,Conservative obvious creator/brand rule,0.36
+headline,off_topic_flags,1,Inherited possible off-topic flag,0.18
+headline,manual_review_rows,107,Union of required flags and stratified sample,19.53
+speaker_role,audience_user,531,Speaker-role distribution,96.9
+speaker_role,creator_or_brand,2,Speaker-role distribution,0.36
+speaker_role,media_or_research,14,Speaker-role distribution,2.55
+speaker_role,unknown,1,Speaker-role distribution,0.18
+platform,Facebook,9,Canonical platform distribution,1.64
+platform,Forum,67,Canonical platform distribution,12.23
+platform,Instagram,9,Canonical platform distribution,1.64
+platform,LinkedIn,8,Canonical platform distribution,1.46
+platform,News/Media,6,Canonical platform distribution,1.09
+platform,Reddit,28,Canonical platform distribution,5.11
+platform,Review Platform,42,Canonical platform distribution,7.66
+platform,YouTube,379,Canonical platform distribution,69.16
+eligibility_reason,clearly_off_topic,1,Non-exclusive logic encoded as combined row reason,0.18
+eligibility_reason,creator_or_brand,2,Non-exclusive logic encoded as combined row reason,0.36
+eligibility_reason,eligible,420,Non-exclusive logic encoded as combined row reason,76.64
+eligibility_reason,eligible_hinglish_retained,36,Non-exclusive logic encoded as combined row reason,6.57
+eligibility_reason,generic_channel_praise,26,Non-exclusive logic encoded as combined row reason,4.74
+eligibility_reason,near_duplicate_copy,59,Non-exclusive logic encoded as combined row reason,10.77
+eligibility_reason,very_short_topic_ineligible,4,Non-exclusive logic encoded as combined row reason,0.73

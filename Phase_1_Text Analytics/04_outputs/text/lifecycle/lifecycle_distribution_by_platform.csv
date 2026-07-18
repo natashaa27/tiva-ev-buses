@@ -1,0 +1,58 @@
+scope_name,platform_group,lifecycle_stage_auto,row_count,sample_size,percent,small_sample_flag
+all_corpus,Facebook,general_unspecified,9,9,100.0,True
+all_corpus,Forum,general_unspecified,44,67,65.67164179104478,False
+all_corpus,Forum,post_use,17,67,25.37313432835821,False
+all_corpus,Forum,pre_adoption,6,67,8.955223880597014,False
+all_corpus,Instagram,general_unspecified,2,9,22.22222222222222,True
+all_corpus,Instagram,post_use,7,9,77.77777777777777,True
+all_corpus,LinkedIn,general_unspecified,8,8,100.0,True
+all_corpus,News/Media,general_unspecified,4,6,66.66666666666667,True
+all_corpus,News/Media,post_use,1,6,16.666666666666668,True
+all_corpus,News/Media,procurement,1,6,16.666666666666668,True
+all_corpus,Reddit,general_unspecified,28,28,100.0,False
+all_corpus,Review Platform,general_unspecified,16,42,38.095238095238095,False
+all_corpus,Review Platform,post_use,26,42,61.904761904761905,False
+all_corpus,YouTube,general_unspecified,338,379,89.1820580474934,False
+all_corpus,YouTube,post_use,14,379,3.6939313984168867,False
+all_corpus,YouTube,pre_adoption,14,379,3.6939313984168867,False
+all_corpus,YouTube,procurement,13,379,3.430079155672823,False
+consumer_sentiment,Facebook,general_unspecified,6,6,100.0,True
+consumer_sentiment,Forum,general_unspecified,25,37,67.56756756756756,False
+consumer_sentiment,Forum,post_use,9,37,24.324324324324323,False
+consumer_sentiment,Forum,pre_adoption,3,37,8.108108108108109,False
+consumer_sentiment,Instagram,post_use,6,6,100.0,True
+consumer_sentiment,Reddit,general_unspecified,23,23,100.0,False
+consumer_sentiment,Review Platform,general_unspecified,7,21,33.333333333333336,False
+consumer_sentiment,Review Platform,post_use,14,21,66.66666666666667,False
+consumer_sentiment,YouTube,general_unspecified,304,345,88.1159420289855,False
+consumer_sentiment,YouTube,post_use,14,345,4.057971014492754,False
+consumer_sentiment,YouTube,pre_adoption,14,345,4.057971014492754,False
+consumer_sentiment,YouTube,procurement,13,345,3.7681159420289854,False
+consumer_topic,Facebook,general_unspecified,6,6,100.0,True
+consumer_topic,Forum,general_unspecified,25,37,67.56756756756756,False
+consumer_topic,Forum,post_use,9,37,24.324324324324323,False
+consumer_topic,Forum,pre_adoption,3,37,8.108108108108109,False
+consumer_topic,Instagram,post_use,6,6,100.0,True
+consumer_topic,Reddit,general_unspecified,23,23,100.0,False
+consumer_topic,Review Platform,general_unspecified,7,21,33.333333333333336,False
+consumer_topic,Review Platform,post_use,14,21,66.66666666666667,False
+consumer_topic,YouTube,general_unspecified,301,342,88.01169590643275,False
+consumer_topic,YouTube,post_use,14,342,4.093567251461988,False
+consumer_topic,YouTube,pre_adoption,14,342,4.093567251461988,False
+consumer_topic,YouTube,procurement,13,342,3.801169590643275,False
+industry_topic,Facebook,general_unspecified,6,6,100.0,True
+industry_topic,Forum,general_unspecified,25,37,67.56756756756756,False
+industry_topic,Forum,post_use,9,37,24.324324324324323,False
+industry_topic,Forum,pre_adoption,3,37,8.108108108108109,False
+industry_topic,Instagram,post_use,6,6,100.0,True
+industry_topic,LinkedIn,general_unspecified,2,2,100.0,True
+industry_topic,News/Media,general_unspecified,2,4,50.0,True
+industry_topic,News/Media,post_use,1,4,25.0,True
+industry_topic,News/Media,procurement,1,4,25.0,True
+industry_topic,Reddit,general_unspecified,23,23,100.0,False
+industry_topic,Review Platform,general_unspecified,7,21,33.333333333333336,False
+industry_topic,Review Platform,post_use,14,21,66.66666666666667,False
+industry_topic,YouTube,general_unspecified,301,342,88.01169590643275,False
+industry_topic,YouTube,post_use,14,342,4.093567251461988,False
+industry_topic,YouTube,pre_adoption,14,342,4.093567251461988,False
+industry_topic,YouTube,procurement,13,342,3.801169590643275,False
